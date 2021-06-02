@@ -13,3 +13,26 @@ blockquote {
 p.center {
     text-align: center;
 }
+
+.topnav {
+    background-color: #ffd8ba;
+    overflow: hidden;
+    border-color: #bae1ff;
+    border-width: 10%;
+    text-align: center;
+}
+
+.topnav a {
+    display: inline-block;
+    background-color: #ffd8ba;
+    color: lightslategrey;
+    padding: 1% 5%;
+    text-decoration: none;
+    font-size: 17px;
+    border: 5% #bae1ff
+}
+
+.topnav a.active {
+    background-color: #bae1ff;
+    color: lightslategrey;
+}
