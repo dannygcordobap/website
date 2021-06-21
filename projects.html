@@ -9,16 +9,16 @@
 
 <body>
     <header>
-        <p>
+        <div class="center" style="width: max-content; white-space: nowrap; background-size: 10%; background-color: #ffedee; padding: 1% 2%; border-radius: 30px;">
             <strong>
-                <h1 class="center" style="text-align: center">Daniel Cordoba Paez</h1>
-                <h4 class="center" style="text-align: center">
+                <h1 style="text-align: center">Daniel Cordoba Paez</h1>
+                <h4 style="text-align: center">
                     B.S. Computer Science,
                     <br/>
                     Western Governors University
                 </h4>
             </strong>
-        </p>
+        </div>
     </header>
     
     <article>
@@ -28,30 +28,40 @@
             <a class="active">Projects</a>
             <a href="about.html">About</a>
         </div>
-        <div style="display: inline-block; align-items: center;">
-            <div style="float: left; margin: auto; width: 40%; padding-left: 3%">
-                <h2 class="center" style="white-space: nowrap;"><a href="https://github.com/dannygcordobap/Pomodoro">Pomodoro Timer</a></h2>
+        <div id="parent">
+            <div id="child" style="float: left;">
+                <h2 class="center" style="white-space: nowrap; text-align: center;"><a href="https://github.com/dannygcordobap/Pomodoro">Pomodoro Timer</a></h2>
                 <p>
                     This project was made during in a weekend as a way to practice and brush up on Java a bit. It reminded me just how powerful and precise Java is as a language, something I didn't quite appreciate before.
                     <br/>
                     During this project I learned that the Timer class runs on a separate thread, managing multiple threads not being something I have done before. That certainly complicated a seemingly simple project, but overall was very fun to make!
-                </p>
-            </div>
-            <div style="float: right; margin: auto; width: 50%;">
-                
-            </div>
-            </div>
-        <div style="display: inline-block; align-items: center;">
-            <div style="float: left; margin: auto; width: 40%; padding-left: 3%">
-                <h2 class="center" style="white-space: nowrap;"><a href="https://github.com/dannygcordobap/Pomodoro">Pomodoro Timer</a></h2>
-                <p>
-                    This project was made during in a weekend as a way to practice and brush up on Java a bit. It reminded me just how powerful and precise Java is as a language, something I didn't quite appreciate before.
                     <br/>
-                    During this project I learned that the Timer class runs on a separate thread, managing multiple threads not being something I have done before. That certainly complicated a seemingly simple project, but overall was very fun to make!
+                    Got the idea from reddit
                 </p>
             </div>
-            <div style="float: right; margin: auto; width: 50%;">
-                
+            <div id="child" style="float: right;">
+                <h2 class="center" style="white-space: nowrap; text-align: center;"><a href="https://github.com/dannygcordobap/InventoryManager">Inventory Manager</a></h2>
+                <p>
+                    Project was made for Software 1 course, made in Java using JavaFX. This project really helped me get the hang of Java, before I really didn't like Java because of how strict it was.
+                    <br/>
+                    Really helped cement the idea of Object Oriented Programming for me
+                </p>
+            </div>
+            </div>
+        <div id="parent">
+            <div id="child" style="float: left;">
+                <h2 class="center" style="white-space: nowrap; text-align: center;"><a href="https://github.com/dannygcordobap/ScrapeLKQ">Scrape LKQ</a></h2>
+                <p>
+                    Project made to automate gathering data on various rims by a company we work closely with. The script automates this process for me but is pretty slow due to the website loading times
+                    <br/>
+                    Python using selenium
+                </p>
+            </div>
+            <div id="child" style="float: right;">
+                <h2 class="center" style="white-space: nowrap; text-align: center;"><a href="https://github.com/dannygcordobap/ScrapeLKQ">Inventory Checker</a></h2>
+                <p>
+                    A very (stress on very) simple CLI script the allows me to search through our top vendor's stock at the start of the day
+                </p>
             </div>
         </div>
     </article>

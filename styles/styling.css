@@ -1,8 +1,14 @@
 html {
     background-color: #bae1ff;
 }
+
+header {
+    padding: 2% 2%;
+}
+
 body {
     background-color: #bae1ff;
+    size: auto;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -58,4 +64,18 @@ p.center {
 .topnav a:hover {
     background-color: #a7cae5;
     color: whitesmoke
+}
+
+div#parent{
+    display: inline-block;
+    text-align: left;
+    padding: 3% 4.5%;
+    height: auto;
+    width: auto
+}
+
+div#child{
+    margin: auto;
+    padding: 0% 3%;
+    width: 40%
 }
