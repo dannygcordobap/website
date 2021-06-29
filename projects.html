@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="styles/styling.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/styling.css" />
     <title>Daniel Cordoba Paez</title>
 </head>
 
 <body>
     <header>
-        <div class="center" style="width: max-content; white-space: nowrap; background-size: 10%; background-color: #ffedee; padding: 1% 2%; border-radius: 30px;">
+        <div class="center" id="header">
             <strong>
                 <h1 style="text-align: center">Daniel Cordoba Paez</h1>
                 <h4 style="text-align: center">
@@ -29,8 +29,8 @@
             <a href="about.html">About</a>
         </div>
         <div id="parent">
-            <div id="child" style="float: left;">
-                <h2 class="center" style="white-space: nowrap; text-align: center;"><a href="https://github.com/dannygcordobap/Pomodoro">Pomodoro Timer</a></h2>
+            <div id="child">
+                <h2 style="white-space: nowrap;"><a href="https://github.com/dannygcordobap/Pomodoro">Pomodoro Timer</a></h2>
                 <p>
                     This project was made during in a weekend as a way to practice and brush up on Java a bit. It reminded me just how powerful and precise Java is as a language, something I didn't quite appreciate before.
                     <br/>
@@ -39,29 +39,89 @@
                     Got the idea from reddit
                 </p>
             </div>
-            <div id="child" style="float: right;">
-                <h2 class="center" style="white-space: nowrap; text-align: center;"><a href="https://github.com/dannygcordobap/InventoryManager">Inventory Manager</a></h2>
+            <div id="child" class="code">
+                <pre id="code">
+                    <code>
+import csv
+
+selection = input("Enter a hollander to search for!\nOr quit to quit the program.\n")
+while selection.lower() != "quit":
+    output = ""
+    with open(r"C:\Users\danny\Work\C2C\C2C.csv", newline = '') as csvfile:
+        reader = csv.reader(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+        count = 1
+        for row in reader:
+            if selection in row[1]:
+output += str(count) + ":\t" + row[1] + "\t" + row[4] + "\n"
+count += 1
+        if output == "":
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            print("\nNo results!\n")
+        else:
+            print(output)
+    selection = input("Enter a hollander to search for!\nOr quit to quit the program.\n\n")
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div id="parent">
+            <div id="child">
+                <h2 style="white-space: nowrap;"><a href="https://github.com/dannygcordobap/InventoryManager">Inventory Manager</a></h2>
                 <p>
                     Project was made for Software 1 course, made in Java using JavaFX. This project really helped me get the hang of Java, before I really didn't like Java because of how strict it was.
                     <br/>
                     Really helped cement the idea of Object Oriented Programming for me
                 </p>
             </div>
+            <div id="child">
+                <p>Code Here</p>
             </div>
+        </div>
         <div id="parent">
-            <div id="child" style="float: left;">
-                <h2 class="center" style="white-space: nowrap; text-align: center;"><a href="https://github.com/dannygcordobap/ScrapeLKQ">Scrape LKQ</a></h2>
+            <div id="child">
+                <h2 style="white-space: nowrap;"><a href="https://github.com/dannygcordobap/ScrapeLKQ">Scrape LKQ</a></h2>
                 <p>
                     Project made to automate gathering data on various rims by a company we work closely with. The script automates this process for me but is pretty slow due to the website loading times
                     <br/>
                     Python using selenium
                 </p>
             </div>
-            <div id="child" style="float: right;">
-                <h2 class="center" style="white-space: nowrap; text-align: center;"><a href="https://github.com/dannygcordobap/ScrapeLKQ">Inventory Checker</a></h2>
+            <div id="child">
+                <p>Code Here</p>
+            </div>
+        </div>
+        <div id="parent">
+            <div id="child">
+                <h2 style="white-space: nowrap;"><a href="inventorychecker.html">Inventory Checker</a></h2>
                 <p>
                     A very (stress on very) simple CLI script the allows me to search through our top vendor's stock at the start of the day
                 </p>
+            </div>
+            <div id="child">
+                <p>Code Here</p>
             </div>
         </div>
     </article>
