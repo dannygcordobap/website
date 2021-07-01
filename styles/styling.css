@@ -13,11 +13,15 @@ body {
     background-color: #C1BDB3;
     size: auto;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    min-height: 100vh;
+    margin: auto;
 }
 
 footer {
-    padding: 10px 10px 0px 10px;
+    position: static;
     bottom: 0;
+    margin-bottom: 0%;
+    margin-top: 1%;
     width: 100%;
     height: 5%;
 }
@@ -46,10 +50,21 @@ p.center {
 .topnav {
     background-color: #5F5B6B;
     overflow: hidden;
+    max-height: 100px;
     border-style: solid;
     border-width: 5px 5px 5px 5px;
     border-color: #7F7979;
     text-align: center;
+}
+
+a:link {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+a:visited {
+    color: whitesmoke;
+    text-decoration: none;
 }
 
 .topnav a {
@@ -82,13 +97,26 @@ div#header {
     border-style: solid;
     border-width: 10px;
     border-color: #3D3B3C;
+    border-radius: 10px 10px;
+}
+
+div#header h1, h4 {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+div#header hr {
+    background-color: #3D3B3C;
+    border-color: #3D3B3C;
+    border-radius: 5px 5px;
+    border-style: solid;
 }
 
 div#parent {
     height: auto;
-    max-height: 375px;
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     text-align: left;
     padding: 3% 4.5%;
     width: auto;
@@ -96,23 +124,69 @@ div#parent {
 
 div#child {
     background-color: whitesmoke;
+    margin: auto;
+    padding: 0% 3%;
+    width: 85%;
+}
+
+div#parent.location {
+    background-color: #7F7979;
+    color: whitesmoke;
+    height: auto;
+    display:flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 3% 1%;
+    width: 75%;
+    margin: auto;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    flex-direction: row;
+    border-style: double;
+    border-width: 10px;
+    border-color: #3D3B3C;
+    border-radius: 5px;
+    
+}
+
+div#child hr {
+    background-color: #3D3B3C;
+    height: 2px;
+    width: 77%;
+    border-style: solid;
+    border-color: #3D3B3C;
+    border-radius: 5px 5px;
+}
+
+div#child.project {
+    background-color: whitesmoke;
     color: #3D3B3C;
     margin: auto;
     padding: 0% 3%;
-    width: 40%;
+    width: 85%;
 }
 
-div#child.code {
-    background-color: transparent;
-    padding: 0% 3%;
+div#child.project h2 {
+    background-color: #5F5B6B;
+    color: white;
+    padding: 2% 2%;
+    margin: 0% 0% 0% 0%;
 }
 
-div#child pre#code {
-    margin: auto;
-    width: 100%;
-    height: 395px;
+div#child.project h3 {
+    text-align: center;
+    background-color: #7F7979;
+    color: whitesmoke;
+    font-variant: small-caps;
+    margin-bottom: 0px;
+    padding: 5px 5px;
+}
+
+div#child.project pre {
+    max-height: 400px;
+    margin-top: 0px;
+    padding-left: 5px;
     overflow: scroll;
-    padding-left: 2%;
     background-color: #3D3B3C;
     color: whitesmoke;
 }
@@ -121,11 +195,11 @@ div#resume {
     margin: auto;
     padding: 2.5% 5% 2.5% 5%;
     width: 75%;
-    background-size: 75% 75%;
     outline-style: solid;
-    outline-color: #7F7979;
+    outline-color: #C1BDB3;
     outline-offset: -20px;
     outline-width: 5px;
+    background-color: #5F5B6B;
 }
 
 div#resumeentry {
@@ -161,6 +235,22 @@ div#resumeentry hr {
     border-style: solid;
     border-color: #5F5B6B;
     border-radius: 5px 5px;
+}
+
+.textchild {
+    margin: auto;
+    padding: 0% 3%;
+    width: 100%;
+    text-align: left;
+    width: 150%;
+}
+
+#footer {
+    color: whitesmoke;
+    text-align: center;
+    margin: auto;
+    padding: 0% 3%;
+    width: 85%;
 }
 
 /* 
