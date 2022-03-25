@@ -18,397 +18,83 @@
 </head>
 
 <body>
-    <header>
-        <div class="center" id="header">
-            <strong>
-                <h1>Daniel Cordoba Paez</h1>
-                <hr />
-                <h4>
-                    B.S. Computer Science,
-                    <br/>
-                    Western Governors University
-                </h4>
-            </strong>
+    <div class="page-container">
+        <div class="content-wrap">
+            <header>
+                <div class="center" id="header">
+                    <strong>
+                        <h1>Daniel Cordoba Paez</h1>
+                        <hr />
+                        <h4>
+                            B.S. Computer Science,
+                            <br/>
+                            Western Governors University
+                        </h4>
+                    </strong>
+                </div>
+            </header>
+        
+            <article>
+                <div class="topnav">
+                    <a href="index.html">Home</a>
+                    <a href="resume.html">Resume</a>
+                    <a class="active">Projects</a>
+                    <a href="about.html">About</a>
+                </div>
+                <div id="parent">
+                    <h2 class="section-label shadow">
+                        <a href="https://blacksheepbarkeep.com" target="_blank">
+                            blacksheepbarkeep.com
+                        </a>
+                    </h2>
+                    <div id="child" class="container">
+                        <p>The GitHub repository is viewable <a href="https://github.com/dannygcordobap/BlackSheepBarkeep" style="color: slategray;" target="_blank">here</a>!</p>
+                        <p>
+                            Black Sheep Barkeep is a fullstack web app I made using MongoDB, Express, React, and Node.
+                            The database consists of over 600 recipes and is still growing! In it's current state you can
+                            search for recipes by name, ingredients, or category. The ingredients search enables users to
+                            search for recipes with only the ingredients that they specified or they can search for
+                            recipes that include at least one of the specified ingredients.
+                        </p>
+                        <p>
+                            I plan on adding support for user accounts and enabling users to save recipes to revisit later. The biggest feature of having an account would be having the ability to store your stock so you can always login to see the recipes you can make.
+                        </p>
+                    </div>
+                </div>
+                <div id="parent">
+                    <h2 class="section-label shadow">
+                        Pomodoro Timer
+                    </h2>
+                    <div id="child" class="container">
+                        <p>The GitHub repository is viewable <a href="https://github.com/dannygcordobap/dannygcordobap" style="color: slategray;" target="_blank">here</a>!</p>
+                        <p>
+                            I made this Pomodoro Timer desktop application in Java using Java FX and Screenbuilder. It started out as an idea
+                            for a simple weekend project I could do. At the time I created this app it was my first real personal project and was
+                            very eye-opening. I found myself having to google many questions and read documentation. Although it is a very simple
+                            idea, creating this app showed me what it was like to work on a real project and step out of my course material a little bit.
+                        </p>
+                        <p>
+                            I didn't think this was something I would use after making it, but now I use it whenever working on a very big project or
+                            whenever I'm studying for a long time. The Pomodoro Technique really does help with knowledge retention, productivity, and
+                            avoiding getting burned out when working on large tasks.
+                        </p>
+                    </div>
+                </div>
+            </article>
         </div>
-    </header>
-    
-    <article>
-        <div class="topnav">
-            <a href="index.html">Home</a>
-            <a href="resume.html">Resume</a>
-            <a class="active">Projects</a>
-            <a href="about.html">About</a>
-        </div>
-        <div id="parent">
-            <div id="child" class="project">
-                <h2 style="white-space: nowrap;"><a href="https://github.com/dannygcordobap/Pomodoro">Pomodoro Timer</a></h2>
-                <p>
-                    This project was a challenge to myself to complete within a weekend. I realized I needed to practice Java and just start coding more often! The title links to this project's repository on my GitHub where you can see more.
-                    <br />
-                    <br />
-                    This timer is meant to be used for productivity and follows the pomodoro technique. The general concept of the pomodoro technique is that with frequent short breaks you can be more productive and will retain more information. Traditionally each pomodoro, the working period, lasts 25 minutes followed by a 5 minute break. Every fourth pomodoro you take a longer 30 minute break before continuing along the same pattern. I went ahead and made my timer take in user input for custom work and break durations, each fourth pomodoro simply adds these two values for the long break.
-                    <br />
-                    <br />
-                    To create this project I used JavaFX 16, SceneBuilder, and both Java's TimerTask and Timer classes. One thing that I orginally did not realize when beginning this project was that Timer objects run on separate threads. This certainly was very confusing to me when I tested my code for the first time and the timer was decreasing way faster than it should have. My solution to this problem, after realizing the cause, was to have one timer task track the the working period and then start into the break period. I can admit that this is not the most optimal solution, but now I know what to expect in the future!
-                </p>
-                <h3>Code Snippet</h3>
-                <pre>
-                    <code>
-Timer timer = new Timer();
-
-int delay = 60000;
-long breakDuration = Long.parseLong(breakTime.getText());
-long workDuration = Long.parseLong(workingTime.getText());
-
-timer.scheduleAtFixedRate(new TimerTask() {
-
-    @Override
-    public void run() {
-
-        Platform.runLater(() -> {
-            
-            int timeRemaining = Integer.parseInt(remainingTime.getText());
-            --timeRemaining;
-            remainingTime.setText(Integer.toString(timeRemaining));
-            
-            if (timeRemaining == 0) {
-
-                AudioClip timerAlert = Applet.newAudioClip(getClass().getResource("/controller/soundAlert.wav"));
-                timerAlert.play();
-                
-                minutes.setVisible(false);
-                remainingTime.setVisible(false);
-                onBreak.setVisible(true);
-                
-                Alert confirm = new Alert(Alert.AlertType.INFORMATION);
-                confirm.setTitle("Pomodoro complete!");
-                confirm.setHeaderText("Get ready for a break!");
-                confirm.setContentText("Your pomodoro is now complete!\nNow you will have a five minute break, "
-                        + "just be sure to actually take the break!");
-                confirm.showAndWait();
-                remainingPomodoros.setText(Integer.toString(Integer.parseInt(remainingPomodoros.getText()) - 1));
-                
-                int completed = (Integer.parseInt(totalPomodoros.getText()) - Integer.parseInt(remainingPomodoros.getText()));
-                
-                if (completed % 4 == 0) {
-
-                    timer.schedule(new TimerTask() {
-
-                        @Override
-                        public void run() {
-                            Platform.runLater(() -> {
-
-                                AudioClip timerAlert = Applet.newAudioClip(getClass().getResource("/controller/soundAlert.wav"));
-                                timerAlert.play();
-
-                                Alert confirm = new Alert(Alert.AlertType.INFORMATION);
-                                confirm.setTitle("Break complete!");
-                                confirm.setHeaderText("Your break is over!");
-                                confirm.setContentText("Your break is now complete!\nNow you will have another working period, "
-                                        + "just be sure focus and be productive!");
-                                confirm.showAndWait();
-
-                                minutes.setVisible(true);
-                                remainingTime.setText(workingTime.getText());
-                                remainingTime.setVisible(true);
-                                onBreak.setVisible(false);
-
-                                if (Integer.parseInt(remainingPomodoros.getText()) == 0) {
-                                    timer.cancel();
-                                    timer.purge();
-                                }
-                            });
-                        }
-                    }, (delay * (breakDuration + workDuration)));
-                } else {
-                    timer.schedule(new TimerTask() {
-
-                        @Override
-                        public void run() {
-                            Platform.runLater(() -> {
-
-                                AudioClip timerAlert = Applet.newAudioClip(getClass().getResource("/controller/soundAlert.wav"));
-                                timerAlert.play();
-                                
-                                if (Integer.parseInt(remainingPomodoros.getText()) == 0) {
-                                    timer.cancel();
-                                    timer.purge();
-                                    Alert confirm = new Alert(Alert.AlertType.INFORMATION);
-                                    confirm.setTitle("No more pomodoros!");
-                                    confirm.setHeaderText("You finished!");
-                                    confirm.setContentText("You have finish all of your pomodoros!\nNow go give your dog attention!"
-                                            + " (Go get one if you don't have one yet.)");
-                                    confirm.showAndWait();
-                                    breakTime.setEditable(true);
-                                    totalPomodoros.setEditable(true);
-                                    workingTime.setEditable(true);
-                                    start.setVisible(true);
-                                } else {
-                                    Alert confirm = new Alert(Alert.AlertType.INFORMATION);
-                                    confirm.setTitle("Break complete!");
-                                    confirm.setHeaderText("Your break is over!");
-                                    confirm.setContentText("Your break is now complete!\nNow you will have another working period, "
-                                            + "just be sure focus and be productive!");
-                                    confirm.showAndWait();
-                                }
-
-                                minutes.setVisible(true);
-                                remainingTime.setText(workingTime.getText());
-                                remainingTime.setVisible(true);
-                                onBreak.setVisible(false);
-                            });
-                        }
-                    }, (long)delay * breakDuration);
-                }
-            }
-        });
-    }
-}, 1000, delay);
-}
-                    </code>
-                </pre>
+        <footer id="footer">
+            <div style="display: flex; flex-direction: row; background-color: #3D3B3C; padding: 10px 0px;">
+                <div id="footer-item">
+                    <a href="https://www.linkedin.com/in/dannygcordobap/">LinkedIn</a>
+                </div>
+                <div id="footer-item">
+                    dannygcordobap@gmail.com
+                </div>
+                <div id="footer-item">
+                    <a href="https://github.com/dannygcordobap">GitHub</a>
+                </div>
             </div>
-        </div>
-        <div id="parent">
-            <div id="child" class="project">
-                <h2 style="white-space: nowrap;">Inventory Manager</h2>
-                <p>
-                    This was the final project for my Software I course. We had to use JavaFX and Java and were allowed to use SceneBuilder to create the GUI. This was my first large project and was a very rewarding experience in many ways. The project's title does not link to a github repository as it is in a private repository to no violate school rules.
-                    <br />
-                    <br />
-                    The situation we were given was to create an inventory management system for a small manufacturing company that was using spreadsheets for inventory management. The system had to organize parts and products, along with their associated parts. Specific part or product information could be modifed, be deleted, and of course simply be viewed.
-                    <br />
-                    <br />
-                    This project was <strong><em>the</em></strong> project that really solidified my understanding of Object Oriented Programming. Before this project the concepts of inheritance and abstract classes always confused me. Clarification came from seeing how In-House and Outsourced objects could be instatiated, but a plain old Part object could not be instatianted. This helped me realize that subclasses of abstract classes force typing within that super class. Ultimately, this project gave me a concrete foundation for Object Oriented Programming and its associated concepts.
-                </p>
-                <h3>Code Snippet</h3>
-                <pre>
-                    <code>
-/**
-* Handles the event of the save button being clicked.
-* Adds a new product to the inventory with user specified data.
-* 
-* Gives user a warning message for bounds errors such as:
-* Minimum stock larger than maximum stock
-* Current stock larger than maximum stock
-* Current stock less than minimum stock
-* 
-* Gives user a warning message for non-numerical characters in any
-* fields requiring numerical values
-* 
-* @param event
-* @throws IOException 
-*/
-public void saveButtonPushed(ActionEvent event) throws IOException {
-    try {
-        int ID = getProductIDCount();
-        String name = productName.getText();
-        int stock = Integer.parseInt(productStock.getText());
-        double price = Double.parseDouble(productPrice.getText());
-        int max = Integer.parseInt(productMax.getText());
-        int min = Integer.parseInt(productMin.getText());
-        if (min > max) {
-            Alert bounds = new Alert(Alert.AlertType.WARNING);
-            bounds.setTitle("Bounds Error");
-            bounds.setHeaderText("Mininum stock must be less than maximum stock.");
-            bounds.setContentText("Please fix this error!");
-            bounds.showAndWait();
-        } else if (stock < min) {
-            Alert bounds = new Alert(Alert.AlertType.WARNING);
-            bounds.setTitle("Bounds Error");
-            bounds.setHeaderText("Product stock must exceed minimum stock.");
-            bounds.setContentText("Please fix this error!");
-            bounds.showAndWait();
-        } else if (stock > max) {
-            Alert bounds = new Alert(Alert.AlertType.WARNING);
-            bounds.setTitle("Bounds Error");
-            bounds.setHeaderText("Product stock must NOT exceed maximum stock.");
-            bounds.setContentText("Please fix this error!");
-            bounds.showAndWait();
-        } else {
-            Product product = new Product(ID, name, price, stock, max, min);
-            for (Part part : productAssociatedParts) {
-                product.addAssociatedPart(part);
-            }
-            addProduct(product);
-            Parent mainParent = FXMLLoader.load(getClass().getResource("/view/Main.fxml"));
-            Scene MainScene = new Scene(mainParent);
-            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-            window.setScene(MainScene);
-            window.show();
-        }
-    } catch (NumberFormatException exception) {
-        Alert format = new Alert(Alert.AlertType.WARNING);
-        format.setTitle("Format Error");
-        format.setHeaderText("Please ensure that input type is appropriate!");
-        format.setContentText("Please fix this error!");
-        format.showAndWait();
-    }
-}
-                    </code>
-                </pre>
-            </div>
-        </div>
-        <div id="parent">
-            <div id="child" class="project">
-                <h2 style="white-space: nowrap;"><a href="https://github.com/dannygcordobap/ScrapeLKQ">Scrape LKQ</a></h2>
-                <p>
-                    This project was made in Python using Selenium for my current job. In the car rim business there is one company, LKQ, that sets the rules. Due to this we use their part numbers for as much consistency as possible. The title links to this project's repository on GitHub where you can see more.
-                    <br/>
-                    <br />
-                    Our inventory gets fed into eBay listings and into listings on our Website. The product details are usually taken off of LKQ's website manually and put into our database for accuracte product specifics, which is important for fitment. This project scrapes all needed rim information from LKQ's website and organizes it so I can send it to our IT team.
-                    <br />
-                    <br />
-                    Although I have used Selenium in the past, I feel that this time I used it more efficiently. This combined with the Object Oriented Programming concepts I have been learning made this project a breeze. Each part number search creates a new rim object and as information is scraped from the website the rim object's attributes are set. Each valid rim object is added to an array which is then iterated through in order to write each rim and rim specifics to an output csv file.
-                </p>
-                <h3>Code Snippet</h3>
-                <pre>
-                    <code>
-def stripInfo(browser: webdriver, rim: Rim):
-    """
-    Modifies a rim object to add necessary data
-        Keyword Arguments:
-            browser (webdriver): current browser instance
-            rim (Rim): rim object being modified
-    """
-    def returnMatGridText(browser: webdriver, css_selector: str) -> List[str]:
-        """
-        Selects and enters hollander into search field
-            Keyword Arguments:
-                browser (webdriver): current browser instance
-                css_selector (str): css selector for specific element type
-            Returns:
-                outp (list): list of data elements
-        """
-        elements = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, cssSelector)))
-        elements = browser.find_elements_by_css_selector(css_selector)
-        outp = []
-        for element in elements:
-            outp.append(element.text.strip())
-        return outp
-    
-    # Strip Shown Details
-    wait = WebDriverWait(browser, 5)
-    try:
-        partDescriptionPath = r'//*[@id="search-results-container"]/div/div/app-product-card/div/section/div[3]/span[2]'
-        partDescription = wait.until(EC.visibility_of_element_located((By.XPATH, partDescriptionPath)))
-        text = partDescription.text
-        temp = text.split('\n')
-        info = []
-        for i in range(len(temp)):
-            info.append(temp[i][2:])
-    except:
-        try:
-            partDescriptionPath = r'//*[@id="search-results-container"]/div/div/app-product-card[1]/div/section/div[3]/span[2]'
-            partDescription = wait.until(EC.visibility_of_element_located((By.XPATH, partDescriptionPath)))
-            text = partDescription.text
-            temp = text.split('\n')
-            info = []
-            for i in range(len(temp)):
-                info.append(temp[i][2:])
-        except:
-            print(f"No results for {rim.sku}")
-    
-    # Info list will be passed in
-    # Validation done here!
-    info = validateDescription(info)
-
-    rim.finish = str(info[0])
-    rim.bp = str(info[1])
-    rim.lugs = str(info[2])
-    rim.style = str(info[3])
-    rim.offset = str(info[4])
-    rim.size = str(info[5])
-
-    # Strip Image    
-    # Tries to access the other information by clicking image first
-    # Otherwise click on first one that has a partial link text match
-    try:
-        imagePath = r'//*[@id="search-results-container"]/div/div/app-product-card/div/section/div[2]/img'
-        image = browser.find_element_by_xpath(imagePath)
-    except:
-        imagePath = r'//*[@id="search-results-container"]/div/div/app-product-card[1]/div/section/div[2]/img'
-        image = browser.find_element_by_xpath(imagePath)
-    try:
-        imageSRC = image.get_attribute('src')
-        imageSavePath = os.getcwd()
-        imageSavePath += rf'\images\{rim.sku}.png'
-        urllib.request.urlretrieve(imageSRC, imageSavePath)
-        print(f'Image for hollander {rim.sku} successfully added to images folder as "{rim.sku}.png"')
-        image.click()
-    except:
-        print("Error selecting and saving image")
-
-    # Strip Year, Make, Model Info and OEM ID's
-    try:
-        sleep(2)
-        cssSelector = 'span.modal-detail-content.grid-text'
-        fitmentList = returnMatGridText(browser, cssSelector)
-        rim.model = fitmentList
-        elementToSendKeys = browser.find_element_by_tag_name('html')
-        elementToSendKeys.send_keys(Keys.TAB, Keys.RIGHT, Keys.ENTER)
-        oemIDList = returnMatGridText(browser, cssSelector)
-        fixedOEMIDList = []
-        for element in oemIDList[len(fitmentList):]:
-            if element not in fitmentList or element != '' or element != ' ':
-                fixedOEMIDList.append(element)
-        rim.oemID = fixedOEMIDList
-    except:
-        print(f'Failed to retrieve extra info for {rim.sku}')                    </code>
-                </pre>
-            </div>
-        </div>
-        <div id="parent">
-            <div id="child" class="project">
-                <h2 style="white-space: nowrap;"><a href="inventorychecker.html">C2C Check</a></h2>
-                    <p>
-                        This script was created due to my frustration of having a large excel window open in my already cluttered virtual workspace. Having to search through the excel sheet is as simple as pressing CTRL + F, but why do that when I can make it smaller and just type in my search? This title does not redirect to a GitHub repository as the Code Snippet box contains the entire program code!
-                        <br/>
-                        <br />
-                        On our website and eBay account we list the inventory of a LKQ subsidiary, Coast to Coast, as available. This means that I often have to search through their inventory when fulfilling orders as well as ours.
-                        <br />
-                        <br />
-                        The script simply uses python's csv module to read in the information stored in the inventory csv. The script searches for partial matches so that I can view all of the avalable color options. As the file's rows are iterated through, an output string is built with numbered results, part number, and quantity. The numbered results was something I originally did so that I could easily incorporate automatic drop ship emails being sent if I selected a search result's number. This idea turned out to be unnecessary as most searches do not result in an immediate drop ship being made.
-                    </p>
-                <h3>Code Snippet</h3>
-                <pre>
-                    <code>
-import csv
-
-selection = input("Enter a hollander to search for!\nOr quit to quit the program.\n")
-while selection.lower() != "quit":
-    output = ""
-    with open(r"C:\Users\danny\Work\C2C\C2C.csv", newline = '') as csvfile:
-        reader = csv.reader(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-        count = 1
-        for row in reader:
-            if selection in row[1]:
-output += str(count) + ":\t" + row[1] + "\t" + row[4] + "\n"
-count += 1
-        if output == "":
-            print("\nNo results!\n")
-        else:
-            print(output)
-    selection = input("Enter a hollander to search for!\nOr quit to quit the program.\n\n")
-                    </code>
-                </pre>
-            </div>
-        </div>
-    </article>
-    <footer>
-        <div style="display: flex; flex-direction: row; background-color: #3D3B3C; padding: 2% 0% 2% 0%;">
-            <div id="footer">
-                <a href="https://www.linkedin.com/in/dannygcordobap/">LinkedIn</a>
-            </div>
-            <div id="footer">
-                Created 2021 by Daniel Cordoba Paez
-                <br />
-                dannygcordobap@gmail.com
-            </div>
-            <div id="footer">
-                <a href="https://github.com/dannygcordobap">GitHub</a>
-            </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 </body>
 </html>
