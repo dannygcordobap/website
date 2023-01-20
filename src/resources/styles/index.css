@@ -1,0 +1,9 @@
+@font-face {
+  font-family: font;
+  src: url(../fonts/Aaargh.ttf);
+}
+
+body {
+  font-family: font;
+  margin: 0px
+}

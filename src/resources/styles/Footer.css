@@ -1,0 +1,29 @@
+.footer {
+    margin: 1em 0;
+    font-size: smaller;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.footer-title {
+    text-align: center;
+}
+
+.footer-content {
+    font-size: smaller;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-content a {
+    color: currentColor;
+}
+
+.footer-content a:visited {
+    color: currentColor;
+}
+
+.footer-content a:hover {
+    font-size: 1.15em;
+}

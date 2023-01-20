@@ -1,0 +1,27 @@
+.card {
+  border: 1px solid #000;
+}
+
+.with-padding {
+  padding: 10px 7.5%;
+}
+
+.sub-card {
+  border: 1px solid #000;
+  margin: 10px 0
+}
+
+.card-header {
+  border: 1px solid #000;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(10px);
+}
+
+.card-title {
+  margin: 0 auto;
+}
