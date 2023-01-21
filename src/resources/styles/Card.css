@@ -1,18 +1,9 @@
-.card {
-  border: 1px solid #000;
-}
-
 .with-padding {
   padding: 10px 7.5%;
 }
 
 .sub-card {
-  border: 1px solid #000;
-  margin: 10px 0
-}
-
-.card-header {
-  border: 1px solid #000;
+  padding: 25px 0;
 }
 
 .sticky {

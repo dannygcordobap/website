@@ -1,66 +1,54 @@
 import React from'react';
 import Card from '../Card';
+import ExperienceItem from './ExperienceItem';
+import '../../resources/styles/Experience.css';
 
 const Experience = () => {
     return (
-        <Card title='Experience' stickyHeader={true}>
+        <Card title='Experience' stickyHeader={ true }>
             Include resume preview and download!
-            <Card 
+            <ExperienceItem 
                 title='Amazon.com, SDE Intern'
-                subtitle={'June 2022 - December 2022'}
-                isNested={true}
+                subtitle = 'June 2022 - December 2022'
             >
-                <div style={{
-                    'border': '1px solid #000', 
-                    'height': '400px', 
-                    'width': '400px',
-                    'display': 'flex',
-                    'align-items': 'center',
-                    'margin': '15px auto 15px auto'
-                }}>
-                    <div style={{
-                        'margin': 'auto',
-                        'textAlign': 'center'
-                }}>
-                        Maybe an image here
-                    </div>
+                <div>
+                    Image carousel
                 </div>
                 <div>
                     Amazon experience here
-                </div>
-                <h4 style={{'margin-bottom': '5px'}}>Project 1</h4>
-                <div>Project 1 here</div>
-                <h4 style={{'margin-bottom': '5px'}}>Project 2</h4>
-                <div>Project 2 here</div>
-            </Card>
-            <Card 
-                title='Factory Wheel Warehouse, Junior SWE'
-                subtitle={'January 2022 - May 2022'}
-                isNested={true}
-            >
-                <div style={{
-                    'border': '1px solid #000', 
-                    'height': '400px', 
-                    'width': '400px',
-                    'display': 'flex',
-                    'align-items': 'center',
-                    'margin': '15px auto 15px auto'
-                }}>
-                    <div style={{
-                        'margin': 'auto',
-                        'textAlign': 'center'
-                }}>
-                        Maybe an image here
-                    </div>
+                    <br />
+                    More stuff
+                    <br />
+                    And even more stuff
                 </div>
                 <div>
-                    FWW experience here
+                    <h4 className='project-header'>Project 1</h4>
+                    <div>Project 1 here</div>
+                    <h4 className='project-header'>Project 2</h4>
+                    <div>Project 2 here</div>
                 </div>
-                <h4 style={{'margin-bottom': '5px'}}>Project 1</h4>
-                <div>Project 1 here</div>
-                <h4 style={{'margin-bottom': '5px'}}>Project 2</h4>
-                <div>Project 2 here</div>
-            </Card>
+            </ExperienceItem>
+            <ExperienceItem 
+                title='Factory Wheel Warehouse, Junior SWE'
+                subtitle = 'January 2022 - May 2022'
+            >
+                <div>
+                    Image carousel
+                </div>
+                <div className='description'>
+                    Amazon experience here
+                    <br />
+                    More stuff
+                    <br />
+                    And even more stuff
+                </div>
+                <div className='projects'>
+                    <h4 style={{'marginBottom': '5px'}}>Project 1</h4>
+                    <div>Project 1 here</div>
+                    <h4 style={{'marginBottom': '5px'}}>Project 2</h4>
+                    <div>Project 2 here</div>
+                </div>
+            </ExperienceItem>
         </Card>
     )
 }

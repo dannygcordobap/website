@@ -1,0 +1,66 @@
+Date : 2023-01-20 22:53:00
+Directory : c:\Users\danny\Coding\projects\dannygcordobap\src
+Total : 27 files,  491 codes, 10 comments, 57 blanks, all 558 lines
+
+Languages
++------------------+------------+------------+------------+------------+------------+
+| language         | files      | code       | comment    | blank      | total      |
++------------------+------------+------------+------------+------------+------------+
+| JavaScript React |         12 |        335 |          1 |         27 |        363 |
+| CSS              |          8 |        101 |          0 |         20 |        121 |
+| JavaScript       |          4 |         32 |          7 |          8 |         47 |
+| XML              |          3 |         23 |          2 |          2 |         27 |
++------------------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                       | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                          |         27 |        491 |         10 |         57 |        558 |
+| . (Files)                                                                                  |          5 |         33 |          7 |          8 |         48 |
+| components                                                                                 |         12 |        335 |          1 |         27 |        363 |
+| components (Files)                                                                         |          3 |         61 |          0 |          7 |         68 |
+| components\About                                                                           |          1 |         37 |          0 |          1 |         38 |
+| components\App                                                                             |          1 |         19 |          1 |          2 |         22 |
+| components\Experience                                                                      |          2 |         81 |          0 |          5 |         86 |
+| components\Footer                                                                          |          2 |         46 |          0 |          6 |         52 |
+| components\Header                                                                          |          1 |         13 |          0 |          2 |         15 |
+| components\Hobbies                                                                         |          2 |         78 |          0 |          4 |         82 |
+| resources                                                                                  |         10 |        123 |          2 |         22 |        147 |
+| resources\icons                                                                            |          2 |         22 |          2 |          2 |         26 |
+| resources\styles                                                                           |          8 |        101 |          0 |         20 |        121 |
++--------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| filename                                                                                   | language         | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| c:\Users\danny\Coding\projects\dannygcordobap\src\App.test.js                              | JavaScript       |          7 |          0 |          2 |          9 |
+| c:\Users\danny\Coding\projects\dannygcordobap\src\components\About\About.jsx               | JavaScript React |         37 |          0 |          1 |         38 |
+| c:\Users\danny\Coding\projects\dannygcordobap\src\components\App\App.jsx                   | JavaScript React |         19 |          1 |          2 |         22 |
+| c:\Users\danny\Coding\projects\dannygcordobap\src\components\Card.jsx                      | JavaScript React |         40 |          0 |          4 |         44 |
+| c:\Users\danny\Coding\projects\dannygcordobap\src\components\Experience\Experience.jsx     | JavaScript React |         54 |          0 |          2 |         56 |
+| c:\Users\danny\Coding\projects\dannygcordobap\src\components\Experience\ExperienceItem.jsx | JavaScript React |         27 |          0 |          3 |         30 |
+| c:\Users\danny\Coding\projects\dannygcordobap\src\components\Footer\Footer.jsx             | JavaScript React |         33 |          0 |          5 |         38 |
+| c:\Users\danny\Coding\projects\dannygcordobap\src\components\Footer\FooterItem.jsx         | JavaScript React |         13 |          0 |          1 |         14 |
+| c:\Users\danny\Coding\projects\dannygcordobap\src\components\Header\Header.jsx             | JavaScript React |         13 |          0 |          2 |         15 |
+| c:\Users\danny\Coding\projects\dannygcordobap\src\components\Hobbies\Hobbies.jsx           | JavaScript React |         54 |          0 |          1 |         55 |
+| c:\Users\danny\Coding\projects\dannygcordobap\src\components\Hobbies\HobbyItem.jsx         | JavaScript React |         24 |          0 |          3 |         27 |
+| c:\Users\danny\Coding\projects\dannygcordobap\src\components\Icon.jsx                      | JavaScript React |          8 |          0 |          1 |          9 |
+| c:\Users\danny\Coding\projects\dannygcordobap\src\components\ImageCarousel.jsx             | JavaScript React |         13 |          0 |          2 |         15 |
+| c:\Users\danny\Coding\projects\dannygcordobap\src\index.js                                 | JavaScript       |         12 |          3 |          3 |         18 |
+| c:\Users\danny\Coding\projects\dannygcordobap\src\logo.svg                                 | XML              |          1 |          0 |          0 |          1 |
+| c:\Users\danny\Coding\projects\dannygcordobap\src\reportWebVitals.js                       | JavaScript       |         12 |          0 |          2 |         14 |
+| c:\Users\danny\Coding\projects\dannygcordobap\src\resources\icons\check.svg                | XML              |         11 |          1 |          1 |         13 |
+| c:\Users\danny\Coding\projects\dannygcordobap\src\resources\icons\copy.svg                 | XML              |         11 |          1 |          1 |         13 |
+| c:\Users\danny\Coding\projects\dannygcordobap\src\resources\styles\App.css                 | CSS              |          8 |          0 |          1 |          9 |
+| c:\Users\danny\Coding\projects\dannygcordobap\src\resources\styles\Card.css                | CSS              |         15 |          0 |          3 |         18 |
+| c:\Users\danny\Coding\projects\dannygcordobap\src\resources\styles\Experience.css          | CSS              |          3 |          0 |          0 |          3 |
+| c:\Users\danny\Coding\projects\dannygcordobap\src\resources\styles\Footer.css              | CSS              |         22 |          0 |          6 |         28 |
+| c:\Users\danny\Coding\projects\dannygcordobap\src\resources\styles\Header.css              | CSS              |          8 |          0 |          1 |          9 |
+| c:\Users\danny\Coding\projects\dannygcordobap\src\resources\styles\Icon.css                | CSS              |          5 |          0 |          0 |          5 |
+| c:\Users\danny\Coding\projects\dannygcordobap\src\resources\styles\ImageCarousel.css       | CSS              |         16 |          0 |          3 |         19 |
+| c:\Users\danny\Coding\projects\dannygcordobap\src\resources\styles\index.css               | CSS              |         24 |          0 |          6 |         30 |
+| c:\Users\danny\Coding\projects\dannygcordobap\src\setupTests.js                            | JavaScript       |          1 |          4 |          1 |          6 |
+| Total                                                                                      |                  |        491 |         10 |         57 |        558 |
++--------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+

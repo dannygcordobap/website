@@ -8,14 +8,14 @@ export default function Card({
     stickyHeader=false, 
     isNested=false
 }) {
-    const headerClass = stickyHeader ? 'card-header sticky with-padding' : 'card-header';
+    const headerClass = stickyHeader ? 'sticky with-padding' : 'card-header';
     const cardClass = isNested ? 'sub-card' : 'card';
 
     const getTitle = () => {
         return isNested ? (
             <h3 className='card-title'>{title}</h3>
         ) : (
-            <h1 className='card-title'>{title}</h1>
+            <h2 className='card-title'>{title}</h2>
         )
     }
 

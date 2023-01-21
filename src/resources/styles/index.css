@@ -7,3 +7,24 @@ body {
   font-family: font;
   margin: 0px
 }
+
+.container-text {
+  width: 50%;
+  margin: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .container-text {
+    width: 80%;
+  }
+}
