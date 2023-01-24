@@ -1,7 +1,6 @@
 import '../resources/styles/ImageCarousel.css';
 
 export default function ImageCarousel({ 
-    children,
     src = undefined,
     alt = undefined,
     caption = undefined

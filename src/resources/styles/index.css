@@ -15,6 +15,11 @@ body {
   margin: 0px
 }
 
+figure {
+  padding-top: 1em;
+  margin-right: 0;
+}
+
 figcaption {
   text-align: center;
   font-size: smaller;
@@ -29,16 +34,31 @@ figcaption {
 
 .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   justify-content: space-evenly;
+  height: fit-content;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 10px) {
   .container {
-    flex-direction: column-reverse;
+    display: inline-block;
   }
 
   .container-text {
-    width: 80%;
+    display: inline;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .container-text {
+    width: 100%;
+  }
+
+  figure {
+    margin: auto;
   }
 }

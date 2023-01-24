@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../../resources/styles/Footer.css';
 import FooterItem from './FooterItem';
 
@@ -10,11 +10,11 @@ export default function Footer() {
                 dannygcordobap@gmail.com
             </FooterItem>
             <FooterItem title='Social Links'>
-                <a href='https://www.linkedin.com/in/dannygcordobap/' target='_blank'>
+                <a href='https://www.linkedin.com/in/dannygcordobap/' rel="noreferrer" target='_blank'>
                     LinkedIn
                 </a>
                 
-                <a href='https://github.com/dannygcordobap' target='_blank'>
+                <a href='https://github.com/dannygcordobap' rel="noreferrer" target='_blank'>
                     GitHub
                 </a>
             </FooterItem>

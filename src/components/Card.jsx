@@ -1,9 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import '../resources/styles/Card.css';
 
 export default function Card({ 
     children, 
     title,
+    rightHeaderContent = undefined,
     subtitle = undefined,
     stickyHeader=false, 
     isNested=false
@@ -12,11 +13,24 @@ export default function Card({
     const cardClass = isNested ? 'sub-card' : 'card';
 
     const getTitle = () => {
-        return isNested ? (
+        let titleHeading = isNested ? (
             <h3 className='card-title'>{title}</h3>
         ) : (
             <h2 className='card-title'>{title}</h2>
         );
+
+        return rightHeaderContent ? (
+            <div className='card-title'>
+                {titleHeading}
+                <div className="header-extra">
+                    {rightHeaderContent}
+                </div>
+            </div>
+        ) : (
+                <div className='card-title'>
+                    {titleHeading}
+                </div>
+            );
     };
 
     const getSubtitle = () => {

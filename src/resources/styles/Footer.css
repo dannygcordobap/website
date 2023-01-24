@@ -15,14 +15,14 @@
     justify-content: space-around;
 }
 
-.footer-content a {
+a {
     color: currentColor;
 }
 
-.footer-content a:visited {
+a:visited {
     color: currentColor;
 }
 
-.footer-content a:hover {
+a:hover {
     font-size: 1.15em;
 }

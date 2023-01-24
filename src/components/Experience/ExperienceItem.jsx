@@ -20,14 +20,14 @@ export default function ExperienceItem({
             isNested={ true }
         >
             <div className='container'>
-                <div className='container-text'>
-                    { description }
-                </div>
                 <ImageCarousel
                     src={src}
                     alt={alt}
                     caption={caption}
                 />
+                <div className='container-text'>
+                    { description }
+                </div>
             </div>
             { projects }
         </Card>
