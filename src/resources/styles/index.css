@@ -3,23 +3,37 @@
   src: url(../fonts/Aaargh.ttf);
 }
 
+:root {
+  --light-color: rgb(6, 35, 28);
+  --light-background-color: rgba(237, 252, 249, 0.5);
+  --dark-color: rgb(244, 244, 246);
+  --dark-background-color: rgb(56, 59, 66)
+}
+
 body {
   font-family: font;
   margin: 0px
 }
 
+figcaption {
+  text-align: center;
+  font-size: smaller;
+  margin-top: 5%
+}
+
 .container-text {
   width: 50%;
+  max-width: 675px;
   margin: auto;
 }
 
 .container {
   display: flex;
   flex-direction: row;
-  
+  justify-content: space-evenly;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .container {
     flex-direction: column-reverse;
   }

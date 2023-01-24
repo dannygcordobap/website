@@ -2,8 +2,18 @@
   font-size: 20px;
 }
 
-@media (max-width: 500px) {
+.light {
+  background-color: var(--light-background-color);
+  color: var(--light-color);
+}
+
+.dark {
+  background-color: var(--dark-background-color);
+  color: var(--dark-color);
+}
+
+@media (max-width: 600px) {
   .App {
-    font-size: 15px;
+    font-size: 13px;
   }
 }

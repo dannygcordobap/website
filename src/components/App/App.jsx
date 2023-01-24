@@ -7,8 +7,11 @@ import Hobbies from '../Hobbies/Hobbies';
 
 export default function App() {
   // TODO: Add projects section, include website, black sheep barkeep and client scheduler?
+  
+
+
   return (
-    <div className='App'>
+    <div className='App light'>
       <Header />
       <div>
         <About />

@@ -5,10 +5,13 @@ import ImageCarousel from '../ImageCarousel';
 export default function ExperienceItem({
     children,
     title,
-    subtitle
+    subtitle,
+    src = undefined,
+    alt = undefined,
+    caption = undefined
 }) {
 
-    const [images, description, projects] = Children.toArray(children)
+    const [description, projects] = Children.toArray(children)
 
     return (
         <Card 
@@ -20,9 +23,11 @@ export default function ExperienceItem({
                 <div className='container-text'>
                     { description }
                 </div>
-                <ImageCarousel>
-                    { images }
-                </ImageCarousel>
+                <ImageCarousel
+                    src={src}
+                    alt={alt}
+                    caption={caption}
+                />
             </div>
             { projects }
         </Card>
