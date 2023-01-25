@@ -1,13 +1,20 @@
+import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './resources/styles/index.css';
 import App from './components/App/App';
 import reportWebVitals from './reportWebVitals';
+import resume from './resources/resume/DanielCordobaPaez-SWE-Resume.pdf';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={ <App /> } />
+        <Route path="/resume" element={ <div style={{height: '100vh'}}><embed src={resume} title={'DanielCordobaPaez_Resume.pdf'} type='application/pdf' width='100%' height='100%' style={{ display: 'block' }}/></div> } />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

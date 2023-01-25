@@ -1,8 +1,7 @@
 .footer {
-    margin: 1em 0;
+    padding-bottom: 1.5em;
     display: flex;
     justify-content: space-evenly;
-    
 }
 
 .footer-title {
@@ -21,8 +20,4 @@ a {
 
 a:visited {
     color: currentColor;
-}
-
-a:hover {
-    font-size: 1.15em;
 }

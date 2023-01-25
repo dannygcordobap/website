@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import Header from '../Header/Header';
 import About from '../About/About';
 import '../../resources/styles/App.css';
@@ -9,10 +10,13 @@ export default function App() {
   // TODO: Add light/dark toggle
   // TODO: Finish hobbies! 
   // TODO: Figure out responsive desktop layout!
+  // TODO: Resume redirect component to refresh on mount
+
+  const [isLightUI, setIsLightUI] = useState(true);
 
   return (
-    <div className='App light'>
-      <Header />
+    <div className={ isLightUI ? 'light' : 'dark' }>
+      <Header isLightUI={ isLightUI } setIsLightUI={ setIsLightUI } />
       <div>
         <About />
         <Experience />

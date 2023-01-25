@@ -1,19 +1,11 @@
-.App {
-  font-size: 20px;
-}
-
 .light {
+  height: 100%;
   background-color: var(--light-background-color);
   color: var(--light-color);
 }
 
 .dark {
+  height: 100%;
   background-color: var(--dark-background-color);
   color: var(--dark-color);
-}
-
-@media (max-width: 500px) {
-  .App {
-    font-size: 13px;
-  }
 }

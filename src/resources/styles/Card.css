@@ -3,18 +3,19 @@
 }
 
 .sub-card {
-  padding: 25px 0;
+  padding: 10px 0;
 }
 
 .sticky {
   position: sticky;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.33);
+  background-color: rgba(255, 255, 255, 0);
   backdrop-filter: blur(25px);
 }
 
 .card-title {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   margin: 0;
 }

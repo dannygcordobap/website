@@ -4,23 +4,19 @@ import ExperienceItem from './ExperienceItem';
 import '../../resources/styles/Experience.css';
 import amazon from '../../resources/images/amazon.jpg';
 import fww from '../../resources/images/fww.jpg';
-import resume from '../../resources/resume/DanielCordobaPaez-SWE-Resume.pdf'
 
 const Experience = () => {
-
-    const linkToResume = <a href={resume} rel="noreferrer" target='_blank'>Resume</a>
 
     return (
         <Card 
             title='Experience' 
             stickyHeader={ true }
-            rightHeaderContent={ linkToResume }
         >
             <ExperienceItem 
                 title='Amazon.com, SDE Intern'
                 subtitle = 'June 2022 - December 2022'
                 src={amazon}
-                alt='View in the spheres'
+                alt='Inside the Amazon Spheres'
                 caption={'The incredible view in the Amazon Spheres'}
             >
                 <div>
