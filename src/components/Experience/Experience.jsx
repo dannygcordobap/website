@@ -4,10 +4,11 @@ import ExperienceItem from './ExperienceItem';
 import '../../resources/styles/Experience.css';
 import amazon from '../../resources/images/amazon.jpg';
 import fww from '../../resources/images/fww.jpg';
+import resume from '../../resources/resume/DanielCordobaPaez-SWE-Resume.pdf'
 
 const Experience = () => {
 
-    const linkToResume = <a href='https://drive.google.com/file/d/17JeeDRq8rYbj3PfqzOh1UlonIILyTeHW/view?usp=sharing' rel="noreferrer" target='_blank'>Resume</a>
+    const linkToResume = <a href={resume} rel="noreferrer" target='_blank'>Resume</a>
 
     return (
         <Card 
