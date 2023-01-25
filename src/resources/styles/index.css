@@ -28,10 +28,12 @@ figcaption {
   margin-top: 5%
 }
 
-iframe {
-  margin: 0;
-  padding: 0;
-  border: none;
+embed {
+  display: block;
+}
+
+.resume-container {
+  height: 100vh;
 }
 
 .container-text {

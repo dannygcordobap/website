@@ -3,8 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './resources/styles/index.css';
 import App from './components/App/App';
+import Resume from './components/Resume/Resume';
 import reportWebVitals from './reportWebVitals';
-import resume from './resources/resume/DanielCordobaPaez-SWE-Resume.pdf';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,7 +12,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={ <App /> } />
-        <Route path="/resume" element={ <div style={{height: '100vh'}}><embed src={resume} title={'DanielCordobaPaez_Resume.pdf'} type='application/pdf' width='100%' height='100%' style={{ display: 'block' }}/></div> } />
+        <Route path="/resume" element={ <Resume /> } />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

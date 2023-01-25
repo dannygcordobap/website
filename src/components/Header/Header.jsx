@@ -1,9 +1,10 @@
 import React from 'react';
 import { isMobile } from 'react-device-detect';
 import '../../resources/styles/Header.css';
-import resume from '../../resources/resume/DanielCordobaPaez-SWE-Resume.pdf'
 
 const Header = ({ isLightUI, setIsLightUI }) => {
+
+    const resumePath = '../../resume/DanielCordobaPaez_Resume.pdf';
 
     const uiChangeHandler = () => {
         setIsLightUI(!isLightUI);
@@ -12,7 +13,7 @@ const Header = ({ isLightUI, setIsLightUI }) => {
     const linkToResume = (
         <a 
             className='toolbar-item' 
-            href={ isMobile ? resume : '/resume' } 
+            href={ isMobile ? resumePath : '/resume' } 
             rel="noreferrer" 
             target='_blank'
         >
