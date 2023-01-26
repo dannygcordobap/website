@@ -1,15 +1,17 @@
-import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useEffect, useRef } from 'react';
 
 export default function Resume() {
 
-    const resumePath = '../resume/DanielCordobaPaez_Resume.pdf'
-    const navigate = useNavigate();
+    const resumePath = '../../resume/DanielCordobaPaez_Resume.pdf';
+    const ref = useRef(null);
 
     useEffect(() => {
-        navigate(resumePath);
-        navigate(0);
-    });
+        if (ref.current) {
+            ref.current.click();
+        }
+    }, [ref]);
 
-    return;
+    return (
+        <a hidden={true} href={resumePath} ref={ref}>Redirect</a>
+    );
 }

@@ -10,7 +10,7 @@ const Header = ({ isLightUI, setIsLightUI }) => {
     const linkToResume = (
         <a 
             className='toolbar-item' 
-            href='/resume' 
+            href='/#/resume' 
             rel="noreferrer" 
             target='_blank'
         >
