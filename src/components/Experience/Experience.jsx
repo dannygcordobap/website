@@ -21,13 +21,16 @@ const Experience = () => {
             >
                 <div>
                     <p>
-                        At Amazon, I worked in Personalization, or P13N, on the Customer Intent team. Owning features such as 'Keep shopping for' and 'Pick up where you left off', we strived to be the best shopping assistant around.
+                        At Amazon, I worked in Personalization, or P13N, on the 
+                        Customer Intent team. Owning features such as 'Keep 
+                        shopping for' and 'Pick up where you left off', we 
+                        strived to be the best shopping assistant around.
                     </p>
                     <p>
-                        Following a successful summer, I managed to extend my internship. During my extension I worked independently on the team and reviewed CR's for systems I was familiar with.
-                    </p>
-                    <p>
-                        
+                        Following a positive feedback from my summer term, 
+                        I managed to extend my internship through the fall. 
+                        During my extension, I worked independently 
+                        on the team and conducted code reviews.
                     </p>
                 </div>
             </ExperienceItem>
@@ -41,16 +44,16 @@ const Experience = () => {
                 <div>
                     <p>
                         Factory Wheel Warehouse is a small online retail 
-                        company focusing on remanufactured rims. Having only 
-                        5 employees, many processes were still manual. I 
-                        started as a full time Sales Representative to support 
-                        myself while in school.
+                        company that focuses on selling remanufactured rims. 
+                        Having only 5 employees, many processes were still 
+                        manual. I started as a full time Sales Representative 
+                        to support myself while in school.
                     </p>
                     <p>
                         As a Sales Representative I automated our internal 
                         processes to free myself more time to focus on 
-                        development tasks earning the Junior SWE title, despite 
-                        being the only software focused employee.
+                        development tasks abd earned myself the title of Junior 
+                        SWE.
                     </p>
                 </div>
             </ExperienceItem>

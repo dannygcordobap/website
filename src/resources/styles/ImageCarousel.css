@@ -9,9 +9,9 @@
     aspect-ratio: 1 / 1;
 }
 
-@media (max-width: 10px) {
+@media (max-width: 900px) {
     .image-container {
-        float: right;
+        width: 75%;
     }
 }
 

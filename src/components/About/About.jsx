@@ -17,11 +17,10 @@ export default function About() {
                         Hi, I'm Danny, and this is my website!
                     </p>
                     <p>
-                        While I was born in Miami, Florida, I have lived there 
-                        the least of all places, and the US least of all 
-                        countries! I grew up in Germany, where I lived for nine 
-                        years, followed by two years in each of the following, 
-                        in order:
+                        While I was born in Miami, Florida, I lived there 
+                        the least of all places! I grew up in Germany, where 
+                        I lived for nine years, followed by two years in each 
+                        of the following:
                         <ol>
                             <li>Okinawa, Japan</li>
                             <li>Tokyo, Japan</li>
