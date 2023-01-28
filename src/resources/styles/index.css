@@ -17,17 +17,6 @@ body {
   font-size: 20px;
 }
 
-figure {
-  padding-top: 1em;
-  margin-right: 0;
-}
-
-figcaption {
-  text-align: center;
-  font-size: smaller;
-  margin-top: 5%
-}
-
 embed {
   display: block;
 }

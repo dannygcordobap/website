@@ -1,9 +1,21 @@
 import React from'react';
 import Card from '../Card';
 import ImageCarousel from '../ImageCarousel';
-import hiking from '../../resources/images/hiking.jpg';
+import hiking1 from '../../resources/images/hiking1.jpg';
+import hiking2 from '../../resources/images/hiking2.jpg';
 
 export default function Hobbies() {
+
+    const images = [hiking1, hiking2];
+    const captions = [
+        'Hiking to Lake Serene in the Cascade Mountains',
+        'Zeus with his saddlebags after a 14-mile overnight'
+    ]
+    const alts = [
+        'Cloud passing over mountainside',
+        'Dog with backpack on bridge in woods'
+    ]
+
     return (
         <Card title='Hobbies' stickyHeader={ true }>
             <Card
@@ -12,48 +24,14 @@ export default function Hobbies() {
             >
                 <div className='container'>
                     <ImageCarousel
-                        src={hiking}
-                        alt='Cloud passing over mountainside'
-                        caption='Hiking to Lake Serene in the Cascades'    
+                        src={images}
+                        alt={alts}
+                        caption={captions}
+                        count={2}
                     />
-                    <div className='container-text'>
-                        <p>
-                            Ever since I got my dog Zeus, I have learned to 
-                            really enjoy hiking and backpacking. 
-                        </p>
-                    </div>
-                </div>
-            </Card>
-            <Card
-                title='Playing the guitar'
-                isNested={ true }
-            >
-                <div className='container'>
-                    <ImageCarousel>
-                        <div>
-                            Image carousel
-                        </div>
-                    </ImageCarousel>
-                    <div className='container-text'>
-                        <p>
-                            Hobby content here
-                        </p>
-                    </div>
-                </div>
-            </Card>
-            <Card
-                title='Trying new hobbies!'
-                isNested={ true }
-            >
-                <div className='container'>
-                    <ImageCarousel>
-                        <div>
-                            Image carousel
-                        </div>
-                    </ImageCarousel>
-                    <div className='container-text'>
-                        Hobby content here
-                    </div>
+                    <p className='container-text'>
+                        Hobby text
+                    </p>
                 </div>
             </Card>
         </Card>
