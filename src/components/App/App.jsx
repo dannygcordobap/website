@@ -19,6 +19,7 @@ export default function App() {
       <div>
         <About />
         <Experience />
+        <Hobbies />
       </div>
       <Footer />
     </div>

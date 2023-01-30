@@ -6,9 +6,7 @@ export default function ExperienceItem({
     children,
     title,
     subtitle,
-    src = undefined,
-    alt = undefined,
-    caption = undefined
+    images
 }) {
 
     const [description, projects] = Children.toArray(children)
@@ -21,9 +19,7 @@ export default function ExperienceItem({
         >
             <div className='container'>
                 <ImageCarousel
-                    src={src}
-                    alt={alt}
-                    caption={caption}
+                    images={ images }
                 />
                 <div className='container-text'>
                     { description }

@@ -2,8 +2,12 @@
     font-size: smaller;
     display: flex;
     justify-content: space-between;
-    margin: 1em;
-    margin-bottom: 0;
+    width: calc(100% - 20px);
+    margin: auto;
+}
+
+.image-count div {
+    margin: auto 0;
 }
 
 .image-count div:hover {
@@ -35,23 +39,18 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-}
-
-.image-container {
-    width: 50%;
-    max-width: 600px;
-    margin: auto;
-}
-
-.carousel-item img, .image-container img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
+    width: calc(100% - 20px);
+    margin: 10px;
     border-radius: 5px;
     box-shadow: 
-        0 1px 1px 0 rgba(0, 0, 0, 0.09),
-        0 2px 2px 0 rgba(0, 0, 0, 0.09),
-        0 4px 4px 0 rgba(0, 0, 0, 0.09),
-        0 8px 8px 0 rgba(0, 0, 0, 0.09);
+        0 1px 2px 0 rgba(0, 0, 0, 0.15),
+        0 2px 4px 0 rgba(0, 0, 0, 0.12),
+        0 4px 8px 0 rgba(0, 0, 0, 0.09);
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
 }
 
 .page-number {
@@ -59,37 +58,30 @@
 }
 
 .active {
-    text-decoration: underline;
+    font-weight: bolder;
+    font-size: larger;
     cursor: default !important;
 }
 
 figure {
-    padding: 1em;
+    padding: 0;
     margin: 0;
-    padding-bottom: 0;
 }
   
 figcaption {
     text-align: center;
     font-size: smaller;
-    margin: 1em;
-    margin-bottom: 0;
+    margin: 0.75em;
     white-space: normal;
 }
 
 @media (max-width: 900px) {
-    .image-container {
-        width: 75%;
-    }
     .carousel {
         width: 75%;
     }
 }
 
 @media (max-width: 500px) {
-    .image-container {
-        width: 100%;
-    }
     .carousel {
         width: 100%;
     }

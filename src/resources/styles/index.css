@@ -17,17 +17,9 @@ body {
   font-size: 20px;
 }
 
-embed {
-  display: block;
-}
-
-.resume-container {
-  height: 100vh;
-}
-
 .container-text {
   width: 50%;
-  max-width: 675px;
+  max-width: 600px;
   margin: auto;
 }
 
@@ -62,7 +54,7 @@ embed {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   body {
     font-size: 13px;
   }

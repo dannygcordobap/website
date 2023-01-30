@@ -2,12 +2,7 @@ import { useEffect, useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import '../resources/styles/ImageCarousel.css';
 
-export default function ImageCarousel({ 
-    src = undefined,
-    alt = undefined,
-    caption = undefined,
-    count = undefined
-}) {
+export default function ImageCarousel({ images = [] }) {
     const [current, setCurrent] = useState(0);
     const [transform, setTransform] = useState({transform: 'translateX(0%)'})
     const [prevClass, setPrevClass] = useState('disabled');
@@ -20,7 +15,7 @@ export default function ImageCarousel({
     }
 
     const nextHandler = () => {
-        if (current < count - 1) {
+        if (current < images.length - 1) {
             setCurrent(current + 1);
         }
     }
@@ -36,7 +31,7 @@ export default function ImageCarousel({
         onSwipedRight: prevHandler
     })
 
-    const imageCount = [...Array(count).keys()]
+    const imageCount = [...Array(images.length).keys()]
         .map(element => {
             return (
                 <div 
@@ -54,7 +49,7 @@ export default function ImageCarousel({
         if (current === 0) {
             setPrevClass('disabled');
             setNextClass('');
-        } else if (current + 1 === src.length) {
+        } else if (current + 1 === images.length) {
             setNextClass('disabled');
             setPrevClass('');
         } else {
@@ -64,41 +59,35 @@ export default function ImageCarousel({
         setTransform({
             transform: `translateX(-${current * 100}%)`
         })
-    }, [current])
+    }, [current, images.length])
 
-    return src ? ( 
-        Array.isArray(src) ? (
-            <div className='carousel' {...swipeHandlers}>
-                <div className='inner' style={transform}>
-                    {[...Array(count).keys()].map(index => {
-                        return (
-                            <div className="carousel-item">
-                                <figure>
-                                    <img src={src[index]} alt={alt[index]} />
-                                    <figcaption>{caption[index]}</figcaption>
-                                </figure>
-                            </div>
-                        )
-                    })}
-                </div>
-                <div className='image-count'>
-                    <div className={prevClass} onClick={prevHandler}>
-                        {'<<< Previous'}
-                    </div>
-                        {imageCount}
-                    <div className={nextClass} onClick={nextHandler}>
-                        {'Next >>>'}
-                    </div>
-                </div>
+    return images.length > 0 ? (
+        <div className='carousel' {...swipeHandlers}>
+            <div className='inner' style={transform}>
+                {images.map(image => {
+                    return (
+                        <div className="carousel-item">
+                            <figure>
+                                <img src={image.src} alt={image.alt} />
+                                <figcaption>{image.caption}</figcaption>
+                            </figure>
+                        </div>
+                    )
+                })}
             </div>
-        ) : (
-            <div className='image-container'>
-                <figure>
-                    <img src={src} alt={alt} />
-                    <figcaption>{caption}</figcaption>
-                </figure>
-            </div>
-        )
+            {images.length > 1 ? (
+                    <div className='image-count'>
+                        <div className={prevClass} onClick={prevHandler}>
+                            {'<<< Previous'}
+                        </div>
+                            {imageCount}
+                        <div className={nextClass} onClick={nextHandler}>
+                            {'Next >>>'}
+                        </div>
+                    </div>
+                ) : null
+            }
+        </div>
     ) : (
         <div className='image-container'>
             <div style={{

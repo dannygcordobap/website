@@ -1,26 +1,23 @@
-import React, { Children } from 'react';
+import React from 'react';
 import Card from '../Card';
 import ImageCarousel from '../ImageCarousel';
 
-export default function ExperienceItem({
+export default function HobbyItem({
     children,
     title,
-    subtitle
+    images
 }) {
-
-    const [images, description] = Children.toArray(children)
 
     return (
         <Card 
             title={ title }
-            subtitle={ subtitle }
             isNested={ true }
         >
             <div className='container'>
-                { description }
-                <ImageCarousel>
-                    { images }
-                </ImageCarousel>
+                <ImageCarousel images={images} />
+                <div className='container-text'>
+                    { children }
+                </div>
             </div>
         </Card>
     )
