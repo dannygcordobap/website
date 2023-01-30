@@ -43,7 +43,7 @@ export default function Amazon() {
                     strived to be the best shopping assistant around.
                 </p>
                 <p>
-                    Following a positive feedback from my summer term, 
+                    Following positive feedback from my summer term, 
                     I managed to extend my internship through the fall. 
                     During my extension, I worked independently 
                     on the team and conducted code reviews.
