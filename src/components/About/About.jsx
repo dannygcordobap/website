@@ -19,7 +19,7 @@ const images = [
     {
         src: karting,
         alt: 'View from a go-kart at an intersection',
-        caption: 'Firspt person view go karting through Shibuya in Tokyo, Japan'
+        caption: 'First person view go karting through Shibuya in Tokyo, Japan'
     }
 ]
 

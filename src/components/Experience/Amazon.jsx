@@ -18,12 +18,12 @@ const images = [
     {
         src: bananas,
         alt: 'Amazon community banana stand',
-        caption: '"There\'s always money in the banana stand."'
+        caption: '"There\'s always money in the banana stand"'
     },
     {
         src: nessie,
         alt: 'Glass building door',
-        caption: 'Amazon Nessie, my team\'s Seattle location.'
+        caption: 'Amazon Nessie, my team\'s Seattle location'
     }
 ]
 
