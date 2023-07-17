@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.afbfedda.css",
-    "main.js": "/static/js/main.b194d5d5.js",
+    "main.js": "/static/js/main.ecf5d8cb.js",
     "static/js/787.7d0334f8.chunk.js": "/static/js/787.7d0334f8.chunk.js",
     "static/media/lake-serene.jpg": "/static/media/lake-serene.e51cca2ccd145a55d054.jpg",
     "static/media/zeus-overnight.jpg": "/static/media/zeus-overnight.fb9ad686a4eca9caf4b8.jpg",
@@ -20,11 +20,11 @@
     "static/media/Aaargh.ttf": "/static/media/Aaargh.3e5f9b2128ca1ff0602c.ttf",
     "index.html": "/index.html",
     "main.afbfedda.css.map": "/static/css/main.afbfedda.css.map",
-    "main.b194d5d5.js.map": "/static/js/main.b194d5d5.js.map",
+    "main.ecf5d8cb.js.map": "/static/js/main.ecf5d8cb.js.map",
     "787.7d0334f8.chunk.js.map": "/static/js/787.7d0334f8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.afbfedda.css",
-    "static/js/main.b194d5d5.js"
+    "static/js/main.ecf5d8cb.js"
   ]
 }
