@@ -1,20 +1,20 @@
-import { Route, HashRouter, Routes } from 'react-router-dom';
+import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './resources/styles/index.css';
-import App from './components/App/App';
-import Resume from './components/Resume/Resume';
+import './resources/styles/globals.css';
+import Home from './components/Home';
+import Resume from './components/Resume';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route exact path="/resume" element={ <Resume /> } />
-        <Route exact path="/" element={ <App /> } />
+        <Route exact path="/" element={ <Home /> } />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

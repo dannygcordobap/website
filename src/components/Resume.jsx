@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 
 export default function Resume() {
-  const resumePath = "../../resume/DanielCordobaPaez-Resume.pdf";
+  const resumePath = "/resume/DanielCordobaPaez-Resume.pdf";
   const ref = useRef(null);
 
   useEffect(() => {
