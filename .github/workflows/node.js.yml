@@ -28,4 +28,6 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run predeploy
+      working-directory: ./src
     - run: npm run deploy
+      working-directory: ./src
