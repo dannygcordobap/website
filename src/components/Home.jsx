@@ -75,7 +75,7 @@ export default function HomePage() {
                   Contact: <a href="mailto:dannnygcordobap@gmail.com">dannnygcordobap@gmail.com</a>
         </p>
         <p className="mb-1">
-          GitHub: <a href="https://github.com/thursday">github.com/dannygcordobap</a>
+          GitHub: <a href="https://github.com/dannygcordobap">github.com/dannygcordobap</a>
         </p>
         <p className="mb-1">© {new Date().getFullYear()} Danny Cordoba</p>
         <p>All rights reserved</p>

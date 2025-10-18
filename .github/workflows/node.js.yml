@@ -33,7 +33,5 @@ jobs:
       uses: snow-actions/git-config-user@v1.0.0
     - name: Predeploy
       run: npm run predeploy
-      working-directory: ./src
     - name: Deploy
       run: npm run deploy
-      working-directory: ./src
