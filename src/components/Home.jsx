@@ -26,9 +26,6 @@ export default function HomePage() {
           <div className="flex items-center gap-4">
             <div className="w-full">
               <h1 className="text-4xl">Danny Cordoba</h1>
-              <p>
-                Hi, this is my website!
-              </p>
             </div>
           </div>
         </header>
