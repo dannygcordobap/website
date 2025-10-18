@@ -1,4 +1,4 @@
-*View and download full resume [here](./resume)*
+*View and download full resume [here](./resume/DanielCordobaPaez-Resume.pdf)*
 
 ### Career snapshots
 #### Amazon - Software Engineer II - Seattle, WA (May 2025 - Present)
