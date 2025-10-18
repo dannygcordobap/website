@@ -11,7 +11,7 @@ Before leveling up, I worked on the same family of personalization features. I r
 This is my nights-and-weekends adventure: building autonomous navigation tech for satellites. I wrangle a small cross-disciplinary team, pair NASA's F' flight software with our computer vision models, and maintain a Python/Blender ray-tracing pipeline that cranks out 100K+ perfectly labeled training images whenever we get a new CAD model to simulate.
 
 #### Factory Wheel Warehouse - Consulting Software Engineer - Remote (Jan 2022 - Present)
-I help a family-run e-commerce business stay nimble. I automated their order importing, PO reconciliation, and shipment tracking so 70% of sales now flow without manual babysitting. I also built a gentle-but-firm reminder system that cuts cancellations by 60% and late shipments by 80%.
+I help a very small e-commerce business in New York's Capital Region stay nimble. Starting there as a Sales Representative while pursuing my online degree, I automated their order importing, PO reconciliation, and shipment tracking so 70% of sales now flow without manual babysitting. I also built a gentle-but-firm reminder system that cuts cancellations by 60% and late shipments by 80%.
 
 #### Amazon - Software Engineering Intern - Seattle, WA
 - **Summer 2023:** Shipped an alarm-driven deployment abort for Amazon's internal CI/CD platform, keeping 200+ deployments per minute safe. Also made the alarm-driven pipeline configuration work across both of our infrastructure-as-code flavors.
