@@ -1,16 +1,16 @@
 ### Technical Projects
 
 #### One Card
-A credit card rewards companion that helps you always swipe the best card. It looks at where you're shopping (with your permission) and matches the merchant to the optimal rewards category. When data gets messy, it falls back to a lightweight LLM classifier. Built with React Native, FastAPI, and DynamoDB, deployed on AWS CDK. It's the app I wish existed when I first started optimizing points.
+A credit card rewards companion that helps you swipe the right card without thinking about it. With permission, it looks at where you're shopping and picks the category that earns the best return. When the data gets messy, a lightweight LLM classifier steps in. React Native, FastAPI, and DynamoDB on AWS CDK keep everything tidy. I originally built it for friends and family who wanted points without spreadsheets.
 
 #### Translunar ESI
-As Co-Founder and CTO, I’m leading the development of autonomous navigation software for spacecraft using NASA’s F´ framework. Our systems fuse vision, inertial, and orbital data to enable precise relative navigation without ground control. Translunar is still early, but the goal is clear — make autonomy in deep space routine.
+As Co-Founder and CTO, I’m building autonomous navigation software for spacecraft on top of NASA’s F´ framework. We fuse vision, inertial, and orbital data to keep vehicles aware without constant ground control. We’re still early, but each prototype gets us closer to making deep-space autonomy feel routine.
 
 #### Home Lab & Networking Stack
-A self-hosted ecosystem anchored by an RTX-powered workstation and a Raspberry Pi cluster running VPN, DNS, Home Assistant, and local LLM inference. I tinker with Ollama + OpenWebUI multi-agent chains, Dockerized GPU orchestration, and persistent local storage to keep workflows fast, private, and reproducible.
+A self-hosted setup anchored by an RTX workstation and a Raspberry Pi cluster running VPN, DNS, Home Assistant, and local LLM inference. I tinker with Ollama + OpenWebUI multi-agent chains, Dockerized GPU orchestration, and persistent local storage to keep workflows fast, private, and reproducible.
 
 #### Effortless Meal Plan
-A smart meal planning web app that generates balanced recipes and grocery lists based on dietary goals. It won first place at MagicHacks 2023 for practical automation and clean UX.  
+A web app that turns dietary goals into balanced recipes and grocery lists. It won first place at MagicHacks 2023 for practical automation and clean UX.  
 [Try it out →](https://dannygcordobap.github.io/effortlessmealplan/)
 
 ---
@@ -18,10 +18,10 @@ A smart meal planning web app that generates balanced recipes and grocery lists 
 ### Personal Builds
 
 #### Home Gym Shed Conversion
-A full interior build — electrical wiring, breaker installation, insulation, drywall, LED lighting, and climate control — designed for long-term efficiency and year-round training. Every element was self-installed and optimized for durability and space efficiency.
+A full interior build — electrical wiring, breaker installation, insulation, drywall, LED lighting, and climate control — designed for long-term efficiency and year-round training. Every piece was self-installed and tuned so it stays comfortable through Seattle weather.
 
 #### Financial Systems Modeling
-Python- and spreadsheet-based simulations for tax optimization, investment growth, and real-estate IRR. These tools make long-term financial decisions empirical, measurable, and compounding — much like software systems designed for scale.
+Python- and spreadsheet-based simulations that help me and my wife make informed calls on tax optimization, financial planning, and home improvement projects. They keep big financial decisions grounded in data instead of guesswork.
 
 #### Fitness Data & Strength Tracking
-A data-driven approach to powerlifting and body composition, built around progressive overload models, macro tracking, and measurable recovery cycles. The current goal: a 1000 lb total by May — engineered through iteration, not guesswork.
+A data-driven approach to powerlifting built around progressive overload, macro tracking, and measurable recovery cycles. The current target is a 1000 lb total by May — steady progress, one training block at a time.
