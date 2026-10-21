@@ -4,28 +4,23 @@ resume_link_text: Resume (PDF)
 
 # Newest first. "when" is the mono label on the left.
 jobs:
-  - when: 2026 / NOW
+  - when: 2022 / NOW
     role: CTO and co-founder, Stellerian
-    what: Leading engineering on ATLAS. Full-time since September 2026.
+    what: Leading technical development at Stellerian. Software architect and ==dreamer==. Full time since 2026.
 
   - when: 2025 / 2026
     role: Software Engineer II, Amazon
-    what: Led the recommendation-generation stack behind Keep Shopping For, coordinating five engineers, keeping large-scale experiments honest, and shipping a new behavioral signal across every surface.
+    what: Worked on Keep Shopping For, running various large-scale experiments across the store ==adding $1B+ in annual revenue==.
 
   - when: 2024 / 2025
     role: Software Engineer I, Amazon
-    what: Ran experiments that added roughly $400M in annual revenue, rebuilt a CDK, Lambda, and S3 compression flow so datasets landed in an hour instead of a day, and cut latency by batching APIs.
+    what: Ran experiments that ==added $400M+ in annual revenue== and worked on various operational improvements to reduce latency and operational expense.
 
-  # TODO: end date. If Translunar became Stellerian, merge this into the Stellerian entry.
-  - when: "2022 / [TODO: end]"
-    role: Co-founder and CTO, Translunar ESI
-    what: Autonomous navigation for spacecraft, pairing NASA's F′ flight software with vision models and a Python and Blender ray-tracing pipeline that spins up 100K+ labeled images on demand.
-
-  - when: "2022 / [TODO: end]"
+  - when: 2022 / 2024
     role: Consulting Software Engineer, Factory Wheel Warehouse
-    what: Automated order import, PO reconciliation, and shipment tracking so 70% of sales run without manual work. A reminder system cut cancellations by 60% and late shipments by 80%.
+    what: Automated business side order management and drop shipping flow at a four person company. Managed $1M of annual orders on ==$0 of infrastructure cost==.
 
-  - when: SUMMER 2023
+  - when: "2023"
     role: Software Engineering Intern, Amazon
     what: Built an alarm-driven deployment abort for an internal CI/CD platform handling 200+ deployments per minute.
 
@@ -35,5 +30,5 @@ jobs:
 
   - when: EDUCATION
     role: B.S. Computer Science, Western Governors University
-    what: December 2023
+    what: Graduated in December 2023
 ---

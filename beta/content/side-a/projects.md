@@ -2,7 +2,7 @@
 nav: Projects
 
 projects:
-  - id: A-P01
+  - id: P01
     title: OneCard
     # Rendered as the OneCard lockup, not a photo
     visual: onecard-lockup
@@ -11,7 +11,7 @@ projects:
     tags: [react native, fastapi, dynamodb]
     link: "[TODO: App Store or project link, or delete this line]"
 
-  - id: A-P02
+  - id: P02
     title: Home lab and networking
     # Rendered as the terminal tile below, not a photo
     visual: terminal

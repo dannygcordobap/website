@@ -3,23 +3,18 @@ nav: Now
 company: Stellerian
 
 tags:
-  - pose estimation
+  - rendezvous and proximity operations
   - space domain awareness
-  - grpc
+  - satellite autonomy
 
 # The spec column on the right of the card
 spec:
-  - label: PRODUCT
-    value: ATLAS
-  - label: STAGE
-    value: Pre-seed
+  - label: PRODUCTS
+    value: ATLAS, ARGUS, ACECam
   - label: LINK
-    value: "[TODO: Stellerian URL]"
+    value: https://stellerian.com
 ---
 
-A pre-seed defense-tech startup. ATLAS is our spacecraft pose estimation and space domain awareness platform, delivered as a gRPC service. Full-time since September 2026.
+A defense-tech startup that I helped build nights and weekends while at Amazon. ATLAS is our space domain awareness software, ARGUS is our pose estimation software, and ACECam is the full stack embedded offering. Fullly invested since 2022, full-time since 2026.
 
-<!--
-TODO (optional): add the SpaceWERX Direct-to-Phase II award or other public
-news here, if you want it on the page.
--->
+Awarded a SpaceWERX Direct-to-Phase II award for autonomous Deorbit as a Service and pushing the boundaries of what normal space operations look like.

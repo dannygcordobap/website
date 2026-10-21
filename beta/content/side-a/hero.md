@@ -3,20 +3,20 @@ title: Danny Cordoba
 
 tags:
   - west seattle
-  - cto / co-founder
+  - co-founder / cto
   - systems
   - computer vision
 
 # The spec strip under the hero
 spec:
   - label: ROLE
-    value: CTO, Stellerian
+    value: Co-founder + CTO @ Stellerian
   - label: FOCUS
     value: Pose estimation, SDA
   - label: BASED
     value: West Seattle, WA
   - label: STATUS
-    value: Building
+    value: Always building
 ---
 
-Software engineer and ==unexpected founder==. CTO at Stellerian, building ATLAS: spacecraft pose estimation and space domain awareness.
+Software engineer and ==unexpected founder==. Problem solving enthusiast. CTO at Stellerian, building ATLAS, ARGUS, and ACECam.
