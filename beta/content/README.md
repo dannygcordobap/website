@@ -32,11 +32,9 @@ content/
 - **`==like this==` is a highlight** (the brass/blue-hour marker). Use one per
   section at most.
 - **`[TODO: ...]` marks something only you can fill in.** Search for `TODO` to
-  find them all. Anything still marked TODO won't ship.
+  find them all. The beta preview shows them highlighted in amber; the live site
+  hides anything still marked TODO.
 - **Images live in `public/images/`.** Reference them by filename, like
   `film-windmill.jpg`.
 - **Section numbers and brackets (`[ A / 02 / NOW ]`) are added by the site,**
   so don't type them here.
-
-The old `about.md`, `projects.md`, and `resume.md` at this level are what the
-current site reads. They'll be deleted once the redesign reads these files instead.
