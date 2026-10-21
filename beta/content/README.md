@@ -36,5 +36,5 @@ content/
   hides anything still marked TODO.
 - **Images live in `public/images/`.** Reference them by filename, like
   `film-windmill.jpg`.
-- **Section numbers and brackets (`[ A / 02 / NOW ]`) are added by the site,**
+- **Section numbers and brackets (`[ 02 / NOW ]`) are added by the site,**
   so don't type them here.
