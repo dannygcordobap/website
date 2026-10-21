@@ -124,6 +124,9 @@ i, em { font-style: italic; }
 /* Unfinished content, only visible on beta */
 .is-todo { background: var(--todo-bg); color: var(--todo) !important; border-radius: 4px; padding: 0 4px; }
 
+/* Beta only: names a content file whose header failed to parse */
+.content-error { margin-top: 16px; padding: 12px 16px; border-radius: 8px; background: var(--todo-bg); color: var(--todo); font-family: var(--mono); font-size: 13px; line-height: 1.6; }
+
 /* Top bar and nav */
 .topbar {
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;
@@ -269,7 +272,7 @@ figcaption { margin-top: 10px; font-family: var(--mono); font-size: 12px; color:
 .onecard-tagline { font-family: var(--mono); font-weight: 600; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--oc-tag); }
 
 /* Terminal tile */
-.terminal { aspect-ratio: 16 / 10; background: var(--ph); border: 1px solid var(--border); border-radius: 8px; display: flex; flex-direction: column; justify-content: center; padding: 18px 20px; box-sizing: border-box; font-family: var(--mono); font-size: 12px; line-height: 1.8; overflow: hidden; }
+.terminal { aspect-ratio: 16 / 10; background: var(--ph); border: 1px solid var(--border); border-radius: 8px; display: flex; flex-direction: column; justify-content: center; padding: 18px 20px; box-sizing: border-box; font-family: var(--mono); font-size: 12px; line-height: 1.8; overflow-wrap: anywhere; }
 .t-prompt { color: var(--link); margin-right: 1ch; }
 .t-key { color: var(--label); }
 .t-sub { color: var(--muted); }

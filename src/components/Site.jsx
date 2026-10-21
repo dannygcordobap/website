@@ -483,10 +483,20 @@ export default function Site() {
 
   if (!content) return <div className="page" aria-busy="true" />;
   const site = content.site.data;
+  const broken = Object.entries(content).filter(([, f]) => f.error);
 
   return (
     <div className={`page side-${side.toLowerCase()}`}>
       <div className="wrap">
+        {SHOW_TODO && broken.length > 0 && (
+          <div className="content-error" role="alert">
+            {broken.map(([name, f]) => (
+              <div key={name}>
+                content/{name}.md: {f.error}
+              </div>
+            ))}
+          </div>
+        )}
         <header className="topbar">
           <a href="#top" className="brand" onClick={() => window.scrollTo({ top: 0 })}>
             [ DC ] {site.domain}

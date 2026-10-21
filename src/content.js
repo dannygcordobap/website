@@ -30,7 +30,16 @@ const FILES = [
 // Splits "---\nyaml\n---\nbody" into { data, body }.
 function parseFile(text) {
   const match = text.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
-  const data = match ? parse(match[1]) || {} : {};
+  let data = {};
+  let error = null;
+  if (match) {
+    try {
+      data = parse(match[1]) || {};
+    } catch (e) {
+      // One broken header shouldn't take the whole site down.
+      error = e.message.split('\n')[0];
+    }
+  }
   let body = match ? match[2] : text;
 
   // HTML comments are notes for the author, never content.
@@ -44,7 +53,7 @@ function parseFile(text) {
       .join('\n\n');
   }
 
-  return { data, body: body.trim() };
+  return { data, body: body.trim(), error };
 }
 
 export async function loadContent() {
