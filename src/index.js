@@ -2,7 +2,7 @@ import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './resources/styles/globals.css';
-import Home from './components/Home';
+import Site from './components/Site';
 import Resume from './components/Resume';
 import reportWebVitals from './reportWebVitals';
 
@@ -12,7 +12,7 @@ root.render(
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route exact path="/resume" element={ <Resume /> } />
-        <Route exact path="/" element={ <Home /> } />
+        <Route exact path="/" element={ <Site /> } />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

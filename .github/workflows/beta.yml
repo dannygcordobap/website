@@ -30,6 +30,9 @@ jobs:
     - name: Build for /beta
       env:
         PUBLIC_URL: /beta
+        # Show unfinished [TODO] content and keep the preview out of search engines
+        REACT_APP_SHOW_TODO: 'true'
+        REACT_APP_ROBOTS: noindex,nofollow
       run: npm run build
     - name: Git config user
       uses: snow-actions/git-config-user@v1.0.0
