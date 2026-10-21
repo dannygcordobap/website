@@ -354,7 +354,11 @@ function SideB({ c, site, onFlip }) {
           {shelf.data.side_image && (
             <figure className="side-figure">
               <Photo file={shelf.data.side_image} alt={shelf.data.side_image_alt} ratio="3 / 4" />
-              {show(shelf.data.side_caption) && <figcaption>{shelf.data.side_caption}</figcaption>}
+              {show(shelf.data.side_caption) && (
+                <figcaption>
+                  <MdInline>{shelf.data.side_caption}</MdInline>
+                </figcaption>
+              )}
             </figure>
           )}
         </div>
@@ -371,7 +375,9 @@ function SideB({ c, site, onFlip }) {
                 {show(p.caption) && (
                   <>
                     {' / '}
-                    <span className={isTodo(p.caption) ? 'is-todo' : ''}>{p.caption}</span>
+                    <span className={isTodo(p.caption) ? 'is-todo' : ''}>
+                      <MdInline>{p.caption}</MdInline>
+                    </span>
                   </>
                 )}
               </figcaption>
