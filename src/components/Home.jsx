@@ -7,13 +7,13 @@ export default function HomePage() {
   const [resumeContent, setResumeContent] = useState("");
 
   useEffect(() => {
-    fetch("/content/about.md")
+    fetch(`${process.env.PUBLIC_URL}/content/about.md`)
       .then((res) => res.text())
       .then((text) => setAboutContent(text));
-    fetch("/content/projects.md")
+    fetch(`${process.env.PUBLIC_URL}/content/projects.md`)
       .then((res) => res.text())
       .then((text) => setProjectsContent(text));
-    fetch("/content/resume.md")
+    fetch(`${process.env.PUBLIC_URL}/content/resume.md`)
       .then((res) => res.text())
       .then((text) => setResumeContent(text));
   }, []);
@@ -69,7 +69,7 @@ export default function HomePage() {
       <footer className="pt-6 max-w-4xl mx-auto w-full mt-10">
         <hr />
         <p className="mb-1">
-                  Contact: <a href="mailto:dannnygcordobap@gmail.com">dannnygcordobap@gmail.com</a>
+                  Contact: <a href="mailto:dannygcordobap@gmail.com">dannygcordobap@gmail.com</a>
         </p>
         <p className="mb-1">
           GitHub: <a href="https://github.com/dannygcordobap">github.com/dannygcordobap</a>
