@@ -5,7 +5,7 @@ nav: Photography
 photos:
   - file: film-sakura-road.jpg
     alt: A road under an arch of cherry blossoms at dusk
-    caption: "==[ Yokota AFB, Tokyo, Japan; 2012; Canon A-1]=="
+    caption: "==[ Yokota AFB, Tokyo, Japan; 2012; Canon A-1 ]=="
   - file: film-windmill.jpg
     alt: A windmill outlined in red neon at night
     caption: "==[ Barcelona, Spain; 2025; Canon Rebel T3i ]=="
