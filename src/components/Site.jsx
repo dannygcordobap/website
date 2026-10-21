@@ -60,7 +60,15 @@ function Spec({ items, className = '' }) {
       {list.map((s) => (
         <div key={s.label} className="spec-item">
           <dt>{s.label}</dt>
-          <dd className={isTodo(s.value) ? 'is-todo' : ''}>{s.value}</dd>
+          <dd className={isTodo(s.value) ? 'is-todo' : ''}>
+            {/^https?:\/\//.test(String(s.value)) ? (
+              <a href={s.value} target="_blank" rel="noreferrer">
+                {String(s.value).replace(/^https?:\/\//, '').replace(/\/$/, '')}
+              </a>
+            ) : (
+              <MdInline>{s.value}</MdInline>
+            )}
+          </dd>
         </div>
       ))}
     </dl>
@@ -231,7 +239,11 @@ function SideA({ c, site, onFlip }) {
               </div>
               <div className="row-main">
                 <div className="row-title">{job.role}</div>
-                {show(job.what) && <div className="row-body">{job.what}</div>}
+                {show(job.what) && (
+                  <div className="row-body">
+                    <MdInline>{job.what}</MdInline>
+                  </div>
+                )}
               </div>
             </li>
           ))}
@@ -328,7 +340,7 @@ function SideB({ c, site, onFlip }) {
         <SectionLabel>{label('B', 2, shelf.data.nav)}</SectionLabel>
         <Md className="prose prose-lg">{shelf.body}</Md>
         <Photo file={shelf.data.banner} alt={shelf.data.banner_alt} ratio="21 / 9" className="banner" />
-        <div className="split">
+        <div className="split shelf-split">
           <ul className="rows rows-ruled split-main">
             {asList(shelf.data.orchids).map((o, i) => (
               <li key={i} className="orchid">
