@@ -6,6 +6,25 @@ const pad = (n) => String(n).padStart(2, '0');
 const label = (side, n, name) => `[ ${side} / ${pad(n)} / ${String(name).toUpperCase()} ]`;
 const asList = (v) => (Array.isArray(v) ? v : []);
 
+const THEME_KEY = 'dc-theme';
+
+const systemTheme = () => {
+  try {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'night' : 'day';
+  } catch (e) {
+    return 'day';
+  }
+};
+
+const storedTheme = () => {
+  try {
+    const v = window.localStorage.getItem(THEME_KEY);
+    return v === 'day' || v === 'night' ? v : null;
+  } catch (e) {
+    return null;
+  }
+};
+
 const initialSide = () => {
   try {
     return new URLSearchParams(window.location.search).get('side') === 'b' ? 'B' : 'A';
@@ -398,6 +417,36 @@ function SideB({ c, site, onFlip }) {
 export default function Site() {
   const [content, setContent] = useState(null);
   const [side, setSide] = useState(initialSide);
+  const [picked, setPicked] = useState(storedTheme);
+  const [system, setSystem] = useState(systemTheme);
+  const theme = picked || system;
+
+  // Follow the system setting until the visitor picks a mode themselves.
+  useEffect(() => {
+    let mq;
+    try {
+      mq = window.matchMedia('(prefers-color-scheme: dark)');
+    } catch (e) {
+      return undefined;
+    }
+    const onChange = () => setSystem(mq.matches ? 'night' : 'day');
+    mq.addEventListener ? mq.addEventListener('change', onChange) : mq.addListener(onChange);
+    return () => (mq.removeEventListener ? mq.removeEventListener('change', onChange) : mq.removeListener(onChange));
+  }, []);
+
+  useEffect(() => {
+    const root = document.documentElement;
+    if (picked) root.setAttribute('data-theme', picked);
+    else root.removeAttribute('data-theme');
+  }, [picked]);
+
+  const toggleTheme = () => {
+    const next = theme === 'night' ? 'day' : 'night';
+    setPicked(next);
+    try {
+      window.localStorage.setItem(THEME_KEY, next);
+    } catch (e) {}
+  };
 
   useEffect(() => {
     loadContent().then(setContent);
@@ -425,11 +474,15 @@ export default function Site() {
           <a href="#top" className="brand" onClick={() => window.scrollTo({ top: 0 })}>
             [ DC ] {site.domain}
           </a>
-          <div className="mode">
+          <button
+            type="button"
+            className="mode"
+            onClick={toggleTheme}
+            aria-label={theme === 'night' ? 'Switch to day colors' : 'Switch to night colors'}
+          >
             <span className="dot" aria-hidden="true" />
-            <span className="mode-day">DAY / SEATTLE</span>
-            <span className="mode-night">NIGHT / SEATTLE</span>
-          </div>
+            {theme === 'night' ? 'NIGHT' : 'DAY'} / SEATTLE
+          </button>
         </header>
         <main id="top">
           {side === 'A' ? <SideA c={content} site={site} onFlip={flip} /> : <SideB c={content} site={site} onFlip={flip} />}

@@ -41,8 +41,9 @@
   color-scheme: light;
 }
 
+/* Night: the system setting, unless the visitor picked day with the toggle */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="day"]) {
     --bg: #18131C;
     --surface: #221B27;
     --border: #2E2533;
@@ -74,6 +75,38 @@
   }
 }
 
+/* Night: picked with the toggle */
+:root[data-theme="night"] {
+  --bg: #18131C;
+  --surface: #221B27;
+  --border: #2E2533;
+  --text: #EFE6DF;
+  --muted: #A3949C;
+  --rule: #C77A4A;
+  --label: #E8B36A;
+  --link: #F0A6D8;
+  --link-hover: #FCC4E9;
+  --hl: rgba(170, 180, 255, 0.2);
+  --dot: #F0A6D8;
+  --dream: #AAB4FF;
+  --tag-bg: rgba(142, 59, 44, 0.5);
+  --tag-fg: #F1D2C8;
+  --mat-bg: rgba(199, 122, 74, 0.18);
+  --mat-fg: #E7CBBB;
+  --sig-bg: rgba(240, 166, 216, 0.14);
+  --sig-fg: #F0A6D8;
+  --ph: #2A2230;
+  --selection: rgba(240, 166, 216, 0.28);
+  --todo: #FFD98A;
+  --todo-bg: rgba(255, 193, 74, 0.12);
+  --oc-bg: #0D1119;
+  --oc-card: #3ED598;
+  --oc-text: #EDF1F7;
+  --oc-tag: #3ED598;
+  --oc-line: #232C40;
+  color-scheme: dark;
+}
+
 html { background: var(--bg); }
 body { margin: 0; background: var(--bg); color: var(--text); -webkit-font-smoothing: antialiased; }
 ::selection { background: var(--selection); }
@@ -98,12 +131,12 @@ i, em { font-style: italic; }
 }
 .brand { color: var(--text); text-decoration: none; font-weight: 500; letter-spacing: 0.04em; }
 .brand:hover { color: var(--text); }
-.mode { display: flex; align-items: center; gap: 8px; color: var(--muted); }
-.mode-night { display: none; }
-@media (prefers-color-scheme: dark) {
-  .mode-day { display: none; }
-  .mode-night { display: inline; }
+.mode {
+  display: flex; align-items: center; gap: 8px; color: var(--muted);
+  font: inherit; background: none; border: 1px solid var(--border); border-radius: 8px;
+  min-height: 44px; padding: 0 14px; cursor: pointer;
 }
+.mode:hover { color: var(--text); border-color: var(--rule); }
 .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--dot); display: inline-block; flex: none; }
 .dot-dream { background: var(--dream); }
 
