@@ -17,10 +17,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Unbounded:wght@900&family=Archivo:wght@900&display=swap" />
+    <!-- Search results and link previews. Edit the description in all three places. -->
     <meta
       name="description"
       content="Danny Cordoba: software engineer and co-founder and CTO of Stellerian, in West Seattle."
     />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Danny Cordoba" />
+    <meta property="og:title" content="Danny Cordoba" />
+    <meta property="og:description" content="Software engineer and co-founder and CTO of Stellerian, in West Seattle." />
+    <meta property="og:url" content="https://dannycordoba.com/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Danny Cordoba" />
+    <meta name="twitter:description" content="Software engineer and co-founder and CTO of Stellerian, in West Seattle." />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -37,15 +46,19 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Danny Cordoba</title>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HKVX8VM9T6"></script>
+    <!-- Google tag (gtag.js), loaded on the live site only, never on /beta -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-HKVX8VM9T6');
-</script>
+      if (location.hostname === 'dannycordoba.com' && location.pathname.indexOf('/beta') !== 0) {
+        var ga = document.createElement('script');
+        ga.async = true;
+        ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-HKVX8VM9T6';
+        document.head.appendChild(ga);
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () { dataLayer.push(arguments); };
+        gtag('js', new Date());
+        gtag('config', 'G-HKVX8VM9T6');
+      }
+    </script>
 
   </head>
   <body>

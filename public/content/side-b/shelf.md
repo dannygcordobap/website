@@ -33,4 +33,4 @@ orchids:
 
 It all started with an orchid from Target. It was on sale and likely to be thrown out. The flowers lasted a week max, but I kept at it. After getting it to spike and keeping it alive for a year I started to build out a small collection.
 
-The rest of the collection started with the Cattleya Skinneri, an homage to my Costa Rican heritage.
+The rest of the collection started with the *Cattleya skinneri*, an homage to my Costa Rican heritage.
