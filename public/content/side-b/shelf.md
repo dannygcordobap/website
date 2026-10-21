@@ -10,21 +10,27 @@ side_caption: The wall, by the back door
 orchids:
   - genus: Cattleya
     name: skinneri
-    note: the petal
+    note: seedling
+  - genus: Oncidium
+    name: "Twinkle 'Oro'"
+    note: spiking
     highlight: true
   - genus: Oncidium
     name: "Twinkle 'Fantasy'"
-    note: oncidium
+    note: spiking
+    highlight: true
   - genus: Oncidium
     name: "Rex's Luck 'Firefly'"
-    note: oncidium
+    note: near blooming size
   - genus: Cattleya
     name: Small World × luteola
-    note: seedlings
+    note: seedling
   - genus: Phalaenopsis
     name: ""
     note: spiking
     highlight: true
 ---
 
-Grown under T5 lights on a twelve-hour day, by the back door.
+It all started with an orchid from target. It was on sale and likely to be thrown out. The flowers lasted a week max, but I kept at it. After getting it to spike and keeping it alive for a year I started to build out a small collection.
+
+The collection started with the Cattleya Skinneri, an homage to my Costa Rican heritage.
