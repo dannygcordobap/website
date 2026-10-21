@@ -473,11 +473,11 @@ export default function Site() {
           <a href="#top" className="brand" onClick={() => window.scrollTo({ top: 0 })}>
             [ DC ] {site.domain}
           </a>
-          <div className="mode-switch" role="group" aria-label="Colors">
+          <div className="mode-switch" role="group" aria-label="Light or dark colors">
             {['day', 'night'].map((m) => (
               <button key={m} type="button" aria-pressed={theme === m} onClick={() => pickTheme(m)}>
                 {theme === m && <span className="dot" aria-hidden="true" />}
-                {m.toUpperCase()}
+                {m === 'day' ? 'LIGHT' : 'DARK'}
               </button>
             ))}
           </div>
