@@ -19,7 +19,11 @@ projects:
       - "interface: wg0"
       - "  listening port: 51820"
       - "peer: [ redacted ]"
-      - "  endpoint: 203.0.113.7:51820"
+      - "  preshared key: [ redacted ]
+      - "  endpoint: 203.0.113.7:40849"
+      - "  allowed ips: 10.186.80.4/32
+      - "  latest handshake: 51 seconds ago
+      - "  transfer: 16.25 GiB received, 99.84 GiB sent
     body: An RTX workstation and a Raspberry Pi cluster running VPN, DNS, Home Assistant, and local LLM inference, with Dockerized GPU orchestration.
     tags: [wireguard, home assistant, ollama]
 
