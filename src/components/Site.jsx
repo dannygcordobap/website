@@ -3,7 +3,7 @@ import { loadContent, show, isTodo, imageUrl, SHOW_TODO } from '../content';
 import { Md, MdInline } from './Md';
 
 const pad = (n) => String(n).padStart(2, '0');
-const label = (side, n, name) => `[ ${side} / ${pad(n)} / ${String(name).toUpperCase()} ]`;
+const label = (side, n, name) => `[ ${pad(n)} / ${String(name).toUpperCase()} ]`;
 const asList = (v) => (Array.isArray(v) ? v : []);
 
 const THEME_KEY = 'dc-theme';
@@ -178,7 +178,7 @@ function SideA({ c, site, onFlip }) {
       </nav>
 
       <section className="hero">
-        <SectionLabel>[ A / 00 ]</SectionLabel>
+        <SectionLabel>[ SIDE A ]</SectionLabel>
         <h1 className="hero-title-a">{hero.data.title}</h1>
         <Md className="hero-lede">{hero.body}</Md>
         <Tags items={hero.data.tags} first="plain" size="lg" />
@@ -297,7 +297,7 @@ function SideB({ c, site, onFlip }) {
 
       <section className="hero hero-split">
         <div className="hero-text">
-          <SectionLabel>[ B / 00 ]</SectionLabel>
+          <SectionLabel>[ SIDE B ]</SectionLabel>
           <h1 className="hero-title-b">{hero.data.title}</h1>
           <Md className="hero-lede hero-lede-b">{hero.body}</Md>
           <Tags items={hero.data.tags} first="mat" size="lg" />
@@ -440,8 +440,7 @@ export default function Site() {
     else root.removeAttribute('data-theme');
   }, [picked]);
 
-  const toggleTheme = () => {
-    const next = theme === 'night' ? 'day' : 'night';
+  const pickTheme = (next) => {
     setPicked(next);
     try {
       window.localStorage.setItem(THEME_KEY, next);
@@ -474,15 +473,14 @@ export default function Site() {
           <a href="#top" className="brand" onClick={() => window.scrollTo({ top: 0 })}>
             [ DC ] {site.domain}
           </a>
-          <button
-            type="button"
-            className="mode"
-            onClick={toggleTheme}
-            aria-label={theme === 'night' ? 'Switch to day colors' : 'Switch to night colors'}
-          >
-            <span className="dot" aria-hidden="true" />
-            {theme === 'night' ? 'NIGHT' : 'DAY'} / SEATTLE
-          </button>
+          <div className="mode-switch" role="group" aria-label="Colors">
+            {['day', 'night'].map((m) => (
+              <button key={m} type="button" aria-pressed={theme === m} onClick={() => pickTheme(m)}>
+                {theme === m && <span className="dot" aria-hidden="true" />}
+                {m.toUpperCase()}
+              </button>
+            ))}
+          </div>
         </header>
         <main id="top">
           {side === 'A' ? <SideA c={content} site={site} onFlip={flip} /> : <SideB c={content} site={site} onFlip={flip} />}
