@@ -47,4 +47,11 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # --dest beta writes into the beta/ folder of gh-pages; --add keeps the
       # live site and its CNAME in place instead of wiping the branch.
-      run: npx gh-pages -d build --dest beta --add -m "Deploy beta preview"
+      run: npx gh-pages -d build --dest beta --add --dotfiles -m "Deploy beta preview"
+    - name: Turn off Jekyll for the whole site
+      # GitHub Pages runs Jekyll unless .nojekyll sits at the site root. Jekyll
+      # turns markdown files with a --- header into HTML pages, which breaks the
+      # content files the site fetches.
+      run: |
+        mkdir -p site-root && touch site-root/.nojekyll
+        npx gh-pages -d site-root --add --dotfiles -m "Disable Jekyll"
