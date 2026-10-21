@@ -6,8 +6,8 @@ coffee:
   title: In the meantime, espresso
   # TODO: rewrite in your voice
   body: Light roasts, one shot at a time. Cold brew when it's warm out.
-  image: "[TODO: espresso-gaggia.jpg, add the photo to public/images/]"
-  image_alt: The espresso machine mid-shot
+  image: espresso-gaggia.jpg
+  image_alt: "The coffee corner: a Baratza grinder, a tamping station, and a Gaggia Classic Pro under a shelf of mugs, with a framed watercolor between them"
   spec:
     - label: MACHINE
       value: Gaggia Classic Pro

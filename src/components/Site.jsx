@@ -404,7 +404,7 @@ function SideB({ c, site, onFlip }) {
               {show(coffee.body) && <p className="prose-lg">{coffee.body}</p>}
               <Spec items={coffee.spec} className="spec-strip spec-tight" />
             </div>
-            <Photo file={coffee.image} alt={coffee.image_alt} ratio="4 / 5" className="coffee-photo" />
+            <Photo file={coffee.image} alt={coffee.image_alt} ratio="4 / 3" className="coffee-photo" />
           </div>
         )}
       </section>
