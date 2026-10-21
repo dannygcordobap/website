@@ -9,7 +9,6 @@ projects:
     tagline: Which card? That one.
     body: A rewards companion that picks the right credit card for each purchase, with a lightweight LLM classifier for messy merchant data. Built for friends and family who want points without spreadsheets.
     tags: [react native, fastapi, dynamodb]
-    link: "[TODO: App Store or project link, or delete this line]"
 
   - id: P02
     title: Home lab and networking
@@ -20,7 +19,7 @@ projects:
       - "interface: wg0"
       - "  listening port: 51820"
       - "peer: [ redacted ]"
-      - "  endpoint: [TODO: what you want to show, or delete]"
+      - "  endpoint: 203.0.113.7:51820"
     body: An RTX workstation and a Raspberry Pi cluster running VPN, DNS, Home Assistant, and local LLM inference, with Dockerized GPU orchestration.
     tags: [wireguard, home assistant, ollama]
 
