@@ -380,6 +380,8 @@ function SideB({ c, site, onFlip }) {
         <Photo file={hero.data.image} alt={hero.data.image_alt} ratio="4 / 5" className="hero-photo" />
       </section>
 
+      <Spec items={hero.data.spec} className="spec-strip" />
+
       <section id="b-1" className="section section-ruled">
         <SectionLabel>{label('B', 1, writing.data.nav)}</SectionLabel>
         <div className="split">
