@@ -18,7 +18,7 @@ Kids will be kids.
 
 ## What's your story?
 
-I think that a lot of us were told that if you liked math and science and wanted to solve difficult problems you should become and engineer. Accompanied by the obligatory "and it pays well too!" 
+I think that a lot of us were told that if you liked math and science and wanted to solve difficult problems you should become an engineer. Accompanied by the obligatory "and it pays well too!" 
 
 As long as I can remember I enjoyed solving problems and combining science and math with creativity. 
 
