@@ -4,19 +4,13 @@ nav: About
 
 This just scratches the surface. Can you really know someone from a website?
 
-<!--
-TODO: Rewrite both sections in your own voice. This is the copy from the old
-site. Aim for two short paragraphs that sound like you: deadpan and specific.
-Keep the two ## headings or rename them.
--->
-
 ## Where are you from?
 
-... is a complicated question for me as we moved around a lot growing up. I spent my childhood in Germany, some middle schhol in Okinawa and the rest in Tokyo. My first few years of highschool were in Alabama before returning to Tokyo. 
+... is a complicated question for me as we moved around a lot growing up. I spent my childhood in Germany, some middle school in Okinawa and the rest in Tokyo. My first few years of high school were in Alabama before returning to Tokyo. 
 
-**"Do you speak ____?"** 
+***"So do you speak ____?"***
 
-English and Spanish, but no, I do not speak any German or Japanese.
+English and Spanish, yes. But to answer your question, no I do not speak German or Japanese.
 
 I know what you are thinking, wasted opportunity. Now that I am older and more mature, I agree.
 
@@ -34,8 +28,8 @@ I didn't love it, but I did love coding. It felt like that thing all those grown
 
 So then I became a software engineer. 
 
-It was ok. I didn't love the heirarchy and the meaninglessness of it all
+It was ok. I wanted to make more decisions and have more autonomy. I wanted to build something.
 
 So then I became a founder.
 
-I finally found what they were talking about all those years ago.
+And I finally found what they were talking about all those years ago.
