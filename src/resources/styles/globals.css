@@ -193,9 +193,8 @@ i, em { font-style: italic; }
 
 .prose p { margin: 0 0 16px; font-size: 16px; line-height: 1.7; max-width: 640px; }
 .prose-lg p, p.prose-lg { font-size: 20px; line-height: 1.6; max-width: 640px; margin: 0 0 24px; }
-.about { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 8px 48px; }
-.about-intro { grid-column: 1 / -1; }
-.about-intro p { font-size: 18px; max-width: 720px; }
+.about { display: flex; flex-direction: column; gap: 40px; max-width: 680px; }
+.about-intro p { font-size: 20px; line-height: 1.55; }
 .about h3 { margin: 0 0 12px; font-size: 20px; font-weight: 500; }
 
 .split { display: flex; flex-wrap: wrap; gap: 32px 48px; align-items: flex-start; }
