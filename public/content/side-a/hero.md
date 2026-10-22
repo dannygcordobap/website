@@ -19,4 +19,4 @@ spec:
     value: Always building
 ---
 
-Software engineer and ==unexpected founder==. Problem solving enthusiast. CTO at Stellerian, building ATLAS, ARGUS, and ACECam.
+Software engineer and ==unexpected founder==. Problem solving enthusiast. CTO at Stellerian, building ATLAS, ARGUS, and ACECam. 

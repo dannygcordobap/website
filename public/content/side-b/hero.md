@@ -4,11 +4,12 @@ image: hero-statue.jpg
 image_alt: A stone bust half in shadow, framed by leaves
 
 tags:
-  - writing
-  - orchids
-  - photography
-  - specialty coffee
+  - running
   - strength training
+  - orchids
+  - home improvement
+  - specialty coffee
+  - photography
 ---
 
-Engineer by trade. The rest of the time I write slowly, tend orchids under grow lights, build things in a shed, and ==think about the coffee shop== I might open someday.
+Engineer by trade. The rest of the time I run and lift weights, grow orchids, work on my shed conversion, hunt for good coffee, write *very* slowly, and ==think about the cafe== I hope to open someday. I take pictures too sometimes.

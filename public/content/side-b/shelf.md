@@ -4,7 +4,7 @@ banner: shelf-nursery.jpg
 banner_alt: "The desk nursery: young orchids in small pots under three LED grow bars"
 side_image: shelf-wall.jpg
 side_image_alt: "The orchid wall: two orchids on a black wire rack, lit from above against a white wall"
-side_caption: The wall, by the back door
+side_caption: The beginnings of something big
 
 # genus is italicized; "highlight: true" gives the note the orchid-pink tag
 orchids:
