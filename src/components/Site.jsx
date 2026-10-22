@@ -52,6 +52,66 @@ function Tags({ items, first = 'plain', size }) {
   );
 }
 
+// Plays once per page load: types a typo, backspaces to where it went wrong,
+// then types the correct value. Screen readers and reduced-motion visitors
+// get the final value immediately.
+let typedOnce = false;
+
+function TypedValue({ value, typo }) {
+  // Decided once on mount, so marking it played doesn't cancel the animation.
+  const [skip] = useState(() => {
+    let reduce = true;
+    try {
+      reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    } catch (e) {}
+    return reduce || typedOnce || !typo;
+  });
+  const [text, setText] = useState(skip ? value : '');
+  const [cursor, setCursor] = useState(!skip);
+
+  useEffect(() => {
+    if (skip) return undefined;
+    typedOnce = true;
+    const final = String(value);
+    const wrong = String(typo);
+    let common = 0;
+    while (common < final.length && final[common] === wrong[common]) common += 1;
+
+    const steps = [];
+    let t = 900;
+    for (let i = 1; i <= wrong.length; i += 1) {
+      t += 55 + Math.random() * 60;
+      steps.push([t, wrong.slice(0, i)]);
+    }
+    t += 450;
+    for (let i = wrong.length - 1; i >= common; i -= 1) {
+      t += 60;
+      steps.push([t, wrong.slice(0, i)]);
+    }
+    t += 220;
+    for (let i = common + 1; i <= final.length; i += 1) {
+      t += 55 + Math.random() * 60;
+      steps.push([t, final.slice(0, i)]);
+    }
+    const timers = steps.map(([at, s]) => setTimeout(() => setText(s), at));
+    timers.push(setTimeout(() => setCursor(false), t + 1600));
+    return () => timers.forEach(clearTimeout);
+  }, [skip, value, typo]);
+
+  return (
+    <span className="typed">
+      <span className="visually-hidden">{value}</span>
+      <span className="typed-stage" aria-hidden="true">
+        <span className="typed-ghost">{String(value).length >= String(typo || '').length ? value : typo}</span>
+        <span className="typed-live">
+          {text}
+          {cursor && <span className="typed-cursor" />}
+        </span>
+      </span>
+    </span>
+  );
+}
+
 function Spec({ items, className = '' }) {
   const list = asList(items).filter((s) => show(s.value));
   if (!list.length) return null;
@@ -65,6 +125,8 @@ function Spec({ items, className = '' }) {
               <a href={s.value} target="_blank" rel="noreferrer">
                 {String(s.value).replace(/^https?:\/\//, '').replace(/\/$/, '')}
               </a>
+            ) : s.typo && !isTodo(s.value) ? (
+              <TypedValue value={s.value} typo={s.typo} />
             ) : (
               <MdInline>{s.value}</MdInline>
             )}
@@ -202,7 +264,7 @@ function SideA({ c, site, onFlip }) {
             .split(/\n(?=## )/)
             .filter((chunk) => chunk.trim())
             .map((chunk, i) => (
-              <Md key={i} className="prose" shiftHeadings>
+              <Md key={i} className={chunk.trim().startsWith('## ') ? 'prose' : 'prose about-intro'} shiftHeadings>
                 {chunk}
               </Md>
             ))}
