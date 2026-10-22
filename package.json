@@ -21,7 +21,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "echo dannycordoba.com > ./build/CNAME && gh-pages -d build --dotfiles --remove 'static/**'",
+    "deploy": "echo dannycordoba.com > ./build/CNAME && gh-pages -d build --dotfiles --remove '{static,content,images,resume}/**'",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

@@ -7,7 +7,7 @@ preview at dannycordoba.com/beta/ updates in a minute or two.
 
 ```
 content/
-  site.md            name, contact, meta description (both sides)
+  site.md            name, contact, footer copy (search/preview text lives in public/index.html)
   side-a/            the work: what most visitors see
     hero.md
     about.md

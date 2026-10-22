@@ -90,8 +90,9 @@ function Photo({ file, alt, ratio, className = '' }) {
   return <img className={`photo ${className}`} style={{ aspectRatio: ratio }} src={imageUrl(file)} alt={alt || ''} loading="lazy" />;
 }
 
-function SectionLabel({ children }) {
-  return <div className="label">{children}</div>;
+// Section labels are the page's real h2 headings; the hero's side marker is just a label.
+function SectionLabel({ children, as: Tag = 'h2' }) {
+  return <Tag className="label">{children}</Tag>;
 }
 
 function OneCardLockup({ tagline }) {
@@ -186,7 +187,7 @@ function SideA({ c, site, onFlip }) {
       </nav>
 
       <section className="hero">
-        <SectionLabel>[ SIDE A ]</SectionLabel>
+        <SectionLabel as="div">[ SIDE A ]</SectionLabel>
         <h1 className="hero-title-a">{hero.data.title}</h1>
         <Md className="hero-lede">{hero.body}</Md>
         <Tags items={hero.data.tags} first="plain" size="lg" />
@@ -201,7 +202,7 @@ function SideA({ c, site, onFlip }) {
             .split(/\n(?=## )/)
             .filter((chunk) => chunk.trim())
             .map((chunk, i) => (
-              <Md key={i} className="prose">
+              <Md key={i} className="prose" shiftHeadings>
                 {chunk}
               </Md>
             ))}
@@ -212,7 +213,7 @@ function SideA({ c, site, onFlip }) {
         <SectionLabel>{label('A', 2, now.data.nav)}</SectionLabel>
         <div className="now-card">
           <div className="now-main">
-            <h2>{now.data.company}</h2>
+            <h3>{now.data.company}</h3>
             <Md className="prose">{now.body}</Md>
             <Tags items={now.data.tags} />
           </div>
@@ -309,7 +310,7 @@ function SideB({ c, site, onFlip }) {
 
       <section className="hero hero-split">
         <div className="hero-text">
-          <SectionLabel>[ SIDE B ]</SectionLabel>
+          <SectionLabel as="div">[ SIDE B ]</SectionLabel>
           <h1 className="hero-title-b">{hero.data.title}</h1>
           <Md className="hero-lede hero-lede-b">{hero.body}</Md>
           <Tags items={hero.data.tags} first="mat" size="lg" />
@@ -321,7 +322,7 @@ function SideB({ c, site, onFlip }) {
         <SectionLabel>{label('B', 1, writing.data.nav)}</SectionLabel>
         <div className="split">
           <div className="split-main">
-            <h2 className="book-title">{writing.data.title}</h2>
+            <h3 className="book-title">{writing.data.title}</h3>
             <Tags items={writing.data.tags} first="sig" />
             <Md className="prose prose-lg">{writing.body}</Md>
           </div>

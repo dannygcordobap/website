@@ -59,11 +59,14 @@ const externalLink = ({ href, children }) => {
 };
 
 // Block markdown: paragraphs, headings, lists.
-export function Md({ children, className }) {
+// shiftHeadings renders ## as h3, for markdown that sits under a section heading.
+export function Md({ children, className, shiftHeadings }) {
   if (!children) return null;
+  const components = { a: externalLink, p: paragraph };
+  if (shiftHeadings) components.h2 = ({ children: c }) => <h3>{c}</h3>;
   return (
     <div className={className}>
-      <ReactMarkdown remarkPlugins={[remarkHighlight]} components={{ a: externalLink, p: paragraph }}>
+      <ReactMarkdown remarkPlugins={[remarkHighlight]} components={components}>
         {children}
       </ReactMarkdown>
     </div>
