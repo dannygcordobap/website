@@ -435,8 +435,8 @@ function SideB({ c, site, onFlip }) {
           </div>
           {show(writing.data.excerpt) && (
             <aside className="excerpt">
-              <div className="mini-label">EXCERPT</div>
-              <Md>{writing.data.excerpt}</Md>
+              <div className="mini-label excerpt-label">EXCERPT</div>
+              <Md className="excerpt-body">{writing.data.excerpt}</Md>
             </aside>
           )}
         </div>
