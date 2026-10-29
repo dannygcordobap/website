@@ -13,4 +13,4 @@ excerpt: |+
 
 A semi-autobiographical novel, written in sporadic sprints, mostly at night.
 
-Writing as a form of processing emotions is an underrated practice. This started that way and grew to become something that I want to get out. Too many people are out there struggling with mental health who feel alone. I have been there and I also felt alone. Besides being my way of processing that time of my life this is a way to hopefully let those struggling know that they are not alone.
+Writing as a way of processing emotions is underrated. This started that way and grew into something I want to put out into the world. Too many people struggling with mental health feel alone. I've been there, and I felt alone too. Besides being my way of working through that time in my life, I hope this lets anyone struggling know they are not alone.
