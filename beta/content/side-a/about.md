@@ -2,7 +2,7 @@
 nav: About
 
 # Shown as a route under "Where are you from?", after its first paragraph
-route: [Germany, Okinawa, Tokyo, Alabama, Tokyo, Seattle]
+route: [MIA, FRA, OKA, HND, MGM, HND, ALB, MSP, ALB, SEA]
 ---
 
 This just scratches the surface. Can you really know someone from a website?
