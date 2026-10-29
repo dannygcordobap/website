@@ -258,14 +258,18 @@ function AboutRows({ body, route }) {
   );
 }
 
-function Footer({ id, sideKey, n, site, onFlip, flipText, showGithub }) {
+function Footer({ id, sideKey, n, site, onFlip, flipText, showLinkedin }) {
   return (
     <footer id={id} className="footer">
       <SectionLabel>{label(sideKey, n, 'Contact')}</SectionLabel>
       <div className="footer-cols">
         <div className="footer-col">
           <a href={`mailto:${site.email}`}>{site.email}</a>
-          {showGithub && site.github && <a href={site.github}>{site.github.replace(/^https?:\/\//, '')}</a>}
+          {showLinkedin && site.linkedin && (
+            <a href={site.linkedin} target="_blank" rel="noreferrer">
+              {site.linkedin.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')}
+            </a>
+          )}
         </div>
         <div className="footer-col footer-right">
           <span>
@@ -385,7 +389,7 @@ function SideA({ c, site, onFlip }) {
         )}
       </section>
 
-      <Footer id="a-contact" sideKey="A" n={5} site={site} onFlip={onFlip} flipText={site.flip_to_b} showGithub />
+      <Footer id="a-contact" sideKey="A" n={5} site={site} onFlip={onFlip} flipText={site.flip_to_b} showLinkedin />
     </>
   );
 }
