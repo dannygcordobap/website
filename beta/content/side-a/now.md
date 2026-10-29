@@ -15,6 +15,6 @@ spec:
     value: https://stellerian.com
 ---
 
-A defense-tech startup that I helped build nights and weekends while at Amazon. ATLAS is our space domain awareness software, ARGUS is our pose estimation software, and ACECam is the full stack embedded offering. Fully invested since 2022, full-time since 2026.
+A defense-tech startup that I helped build nights and weekends while at Amazon, full-time since 2026. ATLAS is our space domain awareness software, now flying on a pilot mission with Satlyt. ARGUS is our pose estimation software, and ACECam is the full-stack embedded offering.
 
-Awarded a SpaceWERX Direct-to-Phase II award for autonomous Deorbit as a Service and pushing the boundaries of what normal space operations look like.
+Awarded a $1.8M SpaceWERX Direct-to-Phase II for autonomous deorbit as a service. Our pose estimation work was [published at AIAA SciTech 2026](https://doi.org/10.2514/6.2026-2200).

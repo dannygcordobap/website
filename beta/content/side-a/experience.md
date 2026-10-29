@@ -6,15 +6,15 @@ resume_link_text: Resume (PDF)
 jobs:
   - when: 2022 / NOW
     role: CTO and co-founder, Stellerian
-    what: Leading technical development at Stellerian. Software architect and dreamer. Full time since 2026.
+    what: Primary author of ATLAS, now flying on a pilot mission with Satlyt. Technical lead on a $1.8M SpaceWERX Direct-to-Phase II. Full time since 2026.
 
   - when: 2025 / 2026
     role: Software Engineer II, Amazon
-    what: Worked on Keep Shopping For, running various large-scale experiments across the store adding $1B+ in annual revenue.
+    what: Drove experiments across the Keep Shopping For feature family totaling $1B+ in annualized revenue, including a single launch worth $225M.
 
   - when: 2024 / 2025
     role: Software Engineer I, Amazon
-    what: Ran experiments that added $400M+ in annual revenue and worked on various operational improvements to reduce latency and operational expense.
+    what: "Ran homepage recommendation experiments worth $400M+ in annualized impact, making the feature #2 on Amazon's mobile homepage."
 
   - when: 2022 / 2024
     role: Consulting Software Engineer, Factory Wheel Warehouse
