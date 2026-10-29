@@ -203,7 +203,7 @@ i, em { font-style: italic; }
 .about-row:last-child .about-a > div:last-child p:last-child { margin-top: 24px; font-size: 22px; line-height: 1.4; font-weight: 500; }
 .route { list-style: none; margin: 16px 0 24px; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 0; font-family: var(--mono); font-size: 13px; color: var(--text); }
 .route li { display: flex; align-items: center; }
-.route li + li::before { content: '→'; color: var(--muted); margin: 0 10px; }
+.route li:not(:last-child)::after { content: '→'; color: var(--muted); margin: 0 10px; }
 .route-now { color: var(--label); }
 
 .split { display: flex; flex-wrap: wrap; gap: 32px 48px; align-items: flex-start; }
