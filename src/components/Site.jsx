@@ -206,6 +206,58 @@ function Terminal({ lines }) {
   );
 }
 
+// About as Q&A rows, like Experience: the ## question sits in the left label
+// column and its answer on the right. Text before the first question is the
+// intro. The optional route renders after the first answer's first paragraph,
+// and the last paragraph of the last answer is set as the closing line.
+function AboutRows({ body, route }) {
+  const chunks = String(body || '').split(/\n(?=## )/).filter((c) => c.trim());
+  const intro = chunks.filter((c) => !c.trim().startsWith('## '));
+  const qa = chunks
+    .filter((c) => c.trim().startsWith('## '))
+    .map((c) => {
+      const [first, ...rest] = c.trim().split('\n');
+      return { q: first.replace(/^##\s*/, ''), a: rest.join('\n').trim() };
+    });
+  const places = asList(route).filter(show);
+
+  return (
+    <div className="about">
+      {intro.map((c, i) => (
+        <Md key={i} className="prose about-intro">
+          {c}
+        </Md>
+      ))}
+      <div className="about-rows">
+        {qa.map((row, i) => {
+          const paras = row.a.split(/\n{2,}/);
+          const withRoute = i === 0 && places.length > 0;
+          return (
+            <div key={i} className="about-row">
+              <h3 className="about-q">{row.q}</h3>
+              <div className="about-a prose">
+                <Md>{withRoute ? paras[0] : row.a}</Md>
+                {withRoute && (
+                  <>
+                    <ol className="route" aria-label="Places I've lived">
+                      {places.map((p, j) => (
+                        <li key={j} className={j === places.length - 1 ? 'route-now' : ''}>
+                          {p}
+                        </li>
+                      ))}
+                    </ol>
+                    <Md>{paras.slice(1).join('\n\n')}</Md>
+                  </>
+                )}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 function Footer({ id, sideKey, n, site, onFlip, flipText, showGithub }) {
   return (
     <footer id={id} className="footer">
@@ -259,16 +311,7 @@ function SideA({ c, site, onFlip }) {
 
       <section id="a-1" className="section">
         <SectionLabel>{label('A', 1, about.data.nav)}</SectionLabel>
-        <div className="about">
-          {about.body
-            .split(/\n(?=## )/)
-            .filter((chunk) => chunk.trim())
-            .map((chunk, i) => (
-              <Md key={i} className={chunk.trim().startsWith('## ') ? 'prose' : 'prose about-intro'} shiftHeadings>
-                {chunk}
-              </Md>
-            ))}
-        </div>
+        <AboutRows body={about.body} route={about.data.route} />
       </section>
 
       <section id="a-2" className="section">
