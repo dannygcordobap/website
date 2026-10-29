@@ -16,7 +16,7 @@ jobs:
     role: Software Engineer I, Amazon
     what: Ran experiments that added $400M+ in annual revenue and worked on various operational improvements to reduce latency and operational expense.
 
-  - when: 2022 / 2024
+  - when: 2022 / 2025
     role: Consulting Software Engineer, Factory Wheel Warehouse
     what: Automated business side order management and drop shipping flow at a four person company. Managed $1M of annual orders on ==$0 of incremental infrastructure cost==.
 
