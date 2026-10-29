@@ -427,8 +427,8 @@ function SideB({ c, site, onFlip }) {
 
       <section id="b-1" className="section section-ruled">
         <SectionLabel>{label('B', 1, writing.data.nav)}</SectionLabel>
-        <div className="split">
-          <div className="split-main">
+        <div className="writing">
+          <div>
             <h3 className="book-title">{writing.data.title}</h3>
             <Tags items={writing.data.tags} first="sig" />
             <Md className="prose prose-lg">{writing.body}</Md>

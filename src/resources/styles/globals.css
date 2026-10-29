@@ -259,8 +259,10 @@ figcaption { margin-top: 10px; font-family: var(--mono); font-size: 12px; color:
 /* Writing */
 .book-title { margin: 0 0 8px; font-size: 44px; font-weight: 400; font-style: italic; }
 .side-b .book-title + .tags { margin-bottom: 20px; }
-.excerpt { flex: 1 1 260px; background: var(--surface); border-radius: 12px; padding: 24px; }
-.excerpt p { margin: 0; font-size: 18px; line-height: 1.6; font-style: italic; }
+.writing { display: flex; flex-direction: column; gap: 16px; max-width: 720px; }
+.excerpt { background: var(--surface); border-radius: 12px; padding: 32px 36px; }
+.excerpt .mini-label { margin-bottom: 16px; }
+.excerpt p { margin: 0; font-size: 19px; line-height: 1.65; font-style: italic; }
 .excerpt p + p { margin-top: 14px; }
 
 /* Shelf */
@@ -310,7 +312,7 @@ figcaption { margin-top: 10px; font-family: var(--mono); font-size: 12px; color:
   .wrap { padding: 0 16px 48px; }
   .hero { padding: 48px 0 40px; }
   .section { padding-top: 64px; }
-  .now-card { padding: 24px; }
+  .now-card, .excerpt { padding: 24px; }
   .row-when, .about-q { flex-basis: 100%; }
   .footer-right { align-items: flex-start; }
   .hero-photo, .side-figure, .coffee-photo { max-width: none; }
