@@ -261,6 +261,7 @@ figcaption { margin-top: 10px; font-family: var(--mono); font-size: 12px; color:
 .side-b .book-title + .tags { margin-bottom: 20px; }
 .excerpt { flex: 1 1 260px; background: var(--surface); border-radius: 12px; padding: 24px; }
 .excerpt p { margin: 0; font-size: 18px; line-height: 1.6; font-style: italic; }
+.excerpt p + p { margin-top: 14px; }
 
 /* Shelf */
 .rows-ruled { border-top-color: var(--rule); }
