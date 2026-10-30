@@ -2,6 +2,12 @@
 nav: Now
 company: Stellerian
 
+# Full-width render at the top of the card
+image:
+  file: stellerian-render.webp
+  alt: Rendered 3U CubeSat with deployed solar panels against black space
+  caption: Render from our synthetic imagery pipeline. Sun and Earth albedo only.
+
 tags:
   - rendezvous and proximity operations
   - space domain awareness
