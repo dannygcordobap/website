@@ -325,16 +325,14 @@ function SideA({ c, site, onFlip }) {
             <h3>{now.data.company}</h3>
             <Md className="prose">{now.body}</Md>
             <Tags items={now.data.tags} />
+            <Spec items={now.data.spec} className="now-spec" />
           </div>
-          <div className="now-side">
-            {now.data.image && (
-              <figure className="now-figure">
-                <Photo file={now.data.image.file} alt={now.data.image.alt} ratio="1 / 1" />
-                {now.data.image.caption && <figcaption>{now.data.image.caption}</figcaption>}
-              </figure>
-            )}
-            <Spec items={now.data.spec} className="spec-column" />
-          </div>
+          {now.data.image && (
+            <figure className="now-figure">
+              <Photo file={now.data.image.file} alt={now.data.image.alt} ratio="1 / 1" />
+              {now.data.image.caption && <figcaption>{now.data.image.caption}</figcaption>}
+            </figure>
+          )}
         </div>
       </section>
 
