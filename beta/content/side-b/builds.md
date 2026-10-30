@@ -14,7 +14,7 @@ builds:
     image: build-rack.jpg
     image_alt: "The finished shed: a wall-mounted rack with a loaded barbell, bumper plates hung on either side"
     # TODO: still the right target and framing?
-    body: Training towards a ==1000 lb powerlifting total== at around 155 lbs bodyweight. Protein is important but it doesn't belong in soda.
+    body: Training towards a ==1000 lb powerlifting total== at around 155 lbs bodyweight. Protein matters. Protein soda doesn't.
     tags: [powerlifting, nutrition]
 ---
 
