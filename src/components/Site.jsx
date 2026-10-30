@@ -321,18 +321,20 @@ function SideA({ c, site, onFlip }) {
       <section id="a-2" className="section">
         <SectionLabel>{label('A', 2, now.data.nav)}</SectionLabel>
         <div className="now-card">
-          {now.data.image && (
-            <figure className="now-figure">
-              <Photo file={now.data.image.file} alt={now.data.image.alt} ratio="16 / 10" />
-              {now.data.image.caption && <figcaption>{now.data.image.caption}</figcaption>}
-            </figure>
-          )}
           <div className="now-main">
             <h3>{now.data.company}</h3>
             <Md className="prose">{now.body}</Md>
             <Tags items={now.data.tags} />
           </div>
-          <Spec items={now.data.spec} className="spec-column" />
+          <div className="now-side">
+            {now.data.image && (
+              <figure className="now-figure">
+                <Photo file={now.data.image.file} alt={now.data.image.alt} ratio="1 / 1" />
+                {now.data.image.caption && <figcaption>{now.data.image.caption}</figcaption>}
+              </figure>
+            )}
+            <Spec items={now.data.spec} className="spec-column" />
+          </div>
         </div>
       </section>
 
