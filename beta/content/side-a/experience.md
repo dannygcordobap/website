@@ -10,7 +10,7 @@ jobs:
 
   - when: 2025 / 2026
     role: Software Engineer II, Amazon
-    what: Drove $1B+ in annualized incremental revenue across the Keep Shopping For feature family, including a single launch worth $225M. By the time I left, the family brought in $1B+ a month in attributed revenue.
+    what: Led two cross-team Keep Shopping For projects (6 experiments) totaling $1B+ in annualized incremental revenue, including a single launch worth $225M. By the time I left, the family brought in $1B+ a month in attributed revenue.
 
   - when: 2024 / 2025
     role: Software Engineer I, Amazon
