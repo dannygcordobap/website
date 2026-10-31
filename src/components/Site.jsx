@@ -325,7 +325,6 @@ function SideA({ c, site, onFlip }) {
             <h3>{now.data.company}</h3>
             <Md className="prose">{now.body}</Md>
             <Spec items={now.data.spec} className="now-spec" />
-            <Tags items={now.data.tags} />
           </div>
           {now.data.image && (
             <figure className="now-figure">
