@@ -4,7 +4,7 @@ short_name: Danny
 domain: dannycordoba.com
 email: dannygcordobap@gmail.com
 linkedin: https://www.linkedin.com/in/dannygcordobap/
-resume: resume/DanielCordobaPaez-Resume.pdf
+resume: resume/DanielCordobaPaez_Resume.pdf
 location: West Seattle, WA
 
 # Footer copy

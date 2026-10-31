@@ -1,14 +1,14 @@
 import { useEffect, useRef } from "react";
 
 export default function Resume() {
-  const resumePath = "/resume/DanielCordobaPaez-Resume.pdf";
+  const resumePath = `${process.env.PUBLIC_URL}/resume/DanielCordobaPaez_Resume.pdf`;
   const ref = useRef(null);
 
   useEffect(() => {
     if (ref.current) {
-      ref.current.click();
+      window.location.replace(resumePath);
     }
-  }, [ref]);
+  }, [ref, resumePath]);
 
   return (
     <a hidden={true} href={resumePath} ref={ref}>
